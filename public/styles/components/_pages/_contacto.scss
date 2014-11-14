@@ -1,0 +1,30 @@
+//contacto
+.contact-cont{padding: 1% 0;
+	
+	h2{font-weight:normal; margin:0; padding:0 0%; color:$second-gray; font-size:.9em; letter-spacing:2px; text-transform: uppercase;}
+	
+	nav{padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors; clear:both;
+		ul{padding:0% 0%; list-style-type: none; margin:0;
+			li{display:inline-block; vertical-align: middle; width:30%; text-align: center; margin:0 1%; 
+				a{text-decoration:none; color:$second-gray; font-size:.7em; letter-spacing:2px;
+					&:hover{color:$main-blue;}
+					img{display: inline-block; vertical-align: middle;}
+				}
+			}
+		}
+	}
+	
+	.contact-inner{width: 865px;  margin:0 auto;
+		.contact-info{border-top:1px solid $main-blue;  display: inline-block; margin:20px 0;
+			p{border-bottom:1px solid $main-blue; margin:0; font-size:.7em; display:block; padding:5px 0; &:nth-child(1){letter-spacing:2px;}}
+		}
+	}
+	
+	.carlossantoscoy{display: inline-block; margin: 20px 20px 20px 0px; vertical-align: top; width: 432px;
+		h4{margin:0  100px ; text-align:center; }
+	}
+	
+	.redes{display: inline-block; margin:20px 0; vertical-align: top;
+		a{display:block; text-decoration:none; color:$main-color; padding-bottom: 15px; font-size:.8em; letter-spacing:2px;}
+	}
+}

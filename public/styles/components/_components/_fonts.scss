@@ -1,0 +1,15 @@
+//fonts
+@font-face {
+    font-family: 'futura-book';
+    src: url('../fonts/futura_book.eot');
+    src: url('../fonts/futura_book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futura-book.woff') format('woff'),
+         url('../fonts/futura-book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$reg-font:futura-book;
+
+html,body{font-family:$reg-font; color:#322f31;}

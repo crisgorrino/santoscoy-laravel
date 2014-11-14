@@ -1,0 +1,24 @@
+//header
+
+header{width:100%; background-color: rgba(0, 0, 0, 0.9);
+
+	nav{
+		
+		ul{list-style-type:none; margin:0; padding:2px 0;text-align:center;
+			li{display: inline-block; padding:10px 25px;
+				a{text-decoration: none; color:#fff; font-family:$reg-font; font-size:.7em; display:block; color:$main-gray; letter-spacing:1px;
+					&:hover{color:$main-blue;}
+				}
+				
+			}
+		}
+	}
+ 
+	.logo-cont{text-align:center; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors;
+		 .inner{position:relative;}
+		a{display:inline-block;}
+		
+		.vista{ top: 50px; position: absolute; right:0;}
+	}
+ 
+}

@@ -1,0 +1,33 @@
+//busqueda
+.busqueda-cont{padding: 1% 0;
+	
+	form{padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors; clear:both; background-color:#c7c7c7;
+		p{margin:0; padding:0 0 0 0%;
+			input[type="text"]{background-color: transparent; border:none; outline: none;}
+		}
+	}
+	
+	
+	.busqueda-resultados{width:960px; margin:2% auto;
+		
+		.resultado{width: 29%; display:inline-block; vertical-align: top;  margin: 0 3% 0 0%;
+			h5{font-weight: normal; margin:0; font-size: 1em; letter-spacing:2px; border-top:1px solid $main-blue; border-bottom:1px solid $main-blue; padding:2% 0; line-height:25px;
+				strong{font-weight: bold; color:#000; display: block;}
+			}
+			
+			p{text-transform:uppercase; letter-spacing:2px; font-size:.8em;line-height:25px;
+				span{display:inline-block; background-color:#000; color:#fff; padding:1px;}
+			}
+			
+			.detalles{margin-top:15px; 
+				p{margin:0;}
+			}
+			
+			a{color:$main-blue; text-decoration: none; float:right; display: inline-block; font-size:.8em;}
+		}
+	}
+	
+	.figuras{display:block; margin:10px auto; width:151px; }
+	
+}
+

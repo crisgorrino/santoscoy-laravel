@@ -1,0 +1,33 @@
+ // detalle proyecto
+ .detalle-proyecto{
+	 background-color:#1d1c1c; padding:0;
+	 .inner{width:980px; margin:0 auto;}
+ }
+
+.side-box{width:180px; display:inline-block; vertical-align:top; color:$main-gray;
+	.proy-tags{list-style-type: none; padding:0; width:80%; border-bottom:1px solid $main-blue;
+		li{display:block; padding:3% 0; border-top:1px solid $main-blue; 
+			a{text-decoration: none; color:$main-gray; font-size:.7em; letter-spacing:1px; display:block;}
+		}
+	}
+	p{font-size:.7em; letter-spacing:3px; padding: 0 0 0 22%;}
+	
+	.compartir{list-style-type: none;  width:80%; 
+	 	
+	 	li{display:block;
+		 	a{text-decoration: none; color:$main-gray; display: block; font-size:.7em; letter-spacing:1px; padding:5% 0;}
+	 	}
+	 	
+	}
+	
+}
+
+
+.center-box{width:610px; display:inline-block; vertical-align:top; color:$main-gray; }
+
+.detalle-imgs{margin:5% 0 0 0;
+	.img-cont{display:inline-block; vertical-align:top; max-width:45%; margin: 4%;
+		img{display: block; width:100%;}
+		p{text-align: center; color:$main-gray;}
+	}
+}

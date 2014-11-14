@@ -1,0 +1,19 @@
+//editorial
+.editorial-cont{padding: 1% 0;
+	.top{padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors; clear:both;
+		h2{font-weight:normal; margin:0; padding: 0 305px 0 0%; color:$second-gray; font-size:.9em; letter-spacing:2px; 
+		text-transform: uppercase; display:inline-block; vertical-align:bottom;}
+		img{display:inline-block;}
+		
+		.vista-gray{margin-top: 4%; float:right;}	
+	 }
+	 
+	 .counter{display:block; width:300px; margin:0 auto; text-align:center;}
+}
+
+.edicion-desc{width:40%; margin:0 auto;
+
+	p{letter-spacing:2px; font-size:.8em; margin:20px 0; line-height:20px; text-transform: uppercase;}
+	
+}
+

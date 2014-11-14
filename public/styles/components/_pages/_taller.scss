@@ -1,0 +1,35 @@
+//taller
+.taller-cont{padding: 1% 0;
+	.top{padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors; clear:both;
+		h2{font-weight:normal; margin:0; padding: 0 350px 0 0%; color:$second-gray; font-size:.9em; letter-spacing:2px; text-transform: uppercase; display:inline-block; vertical-align:bottom;}
+	 }
+	
+	.taller-imgs{width:980px; margin: 0 auto; background-color:#aeaeae; position:relative;
+		div{ margin:0 auto; width:980px;
+			img{width:100%; display:block;}
+		}
+	}
+	
+	
+	ul{padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors; clear:both; text-align:center;
+	   list-style-type:none; margin:0;
+			li{display: inline-block; vertical-align: middle; width:145px;
+				a{color:$second-gray; text-decoration:none; font-size: .8em; letter-spacing: 2px; &:hover{color:$main-blue;}}
+			}
+			li.active a{color:$main-blue;}
+		}
+	
+}
+
+.cruz{position:absolute; color:$third-gray; margin:0; font-weight:normal; font-size:4em; display:inline-block; vertical-align:top; z-index:100; &:hover{color:$main-blue; cursor:pointer;}
+	
+		p{
+			display:inline-block; vertical-align: top; background-color:#322f31; padding:20px; margin:0; color:$main-gray;font-weight: normal; letter-spacing: 2px; width:260px;
+			.cruztitle{border-top:1px solid $main-blue; border-bottom:1px solid $main-blue; display: block; font-size:10px; font-weight: normal; padding:5px 0; text-align:left;}
+			span{display:block; font-size:10px; padding:5px 0; text-align:center;}
+		}
+	
+	}
+	
+	
+	.inner{width:980px; margin:0 auto;}

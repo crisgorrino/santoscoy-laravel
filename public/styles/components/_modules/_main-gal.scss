@@ -1,0 +1,8 @@
+//main gallery
+ .main-gal{ position:relative; z-index:3; border-bottom:1px solid $border-colors;
+ 	span{display: block; text-align: center; color:$main-gray; font-size:.7em; border-bottom:1px solid $border-colors; padding:2% 0;}
+	img{display:block; width:980px; margin:0 auto;} 
+	.titulo-main{border-top:1px solid $border-colors;text-align:center; padding:2% 0;
+		h3{ color:$main-gray; display: inline-block; border-bottom:10px solid $main-blue; font-weight:normal; letter-spacing:5px; padding:0 0 5px 0;} 
+	}	
+ }

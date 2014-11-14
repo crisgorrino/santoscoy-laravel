@@ -1,0 +1,19 @@
+//filtros
+.filtros{text-align:center; padding:5% 0 0 0; position:relative; z-index:3;
+	a{letter-spacing:2px;font-size:.8em; text-decoration:none; display:inline-block; color:$main-gray; width:320px;
+	-webkit-filter: grayscale(1); filter: grayscale(1);opacity:1;transition:all 0.5s ease;
+	&:hover{-webkit-filter: grayscale(0); filter: grayscale(0);opacity:1; color:$main-blue; transition:all 0.5s ease;}
+		span{display:block; }
+	}
+	
+	a.active{-webkit-filter: grayscale(0); filter: grayscale(0);opacity:1; color:$main-blue;}
+	
+	.conceptos{width:100%;padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors;text-align:left; color:$main-gray;
+		.conceptos-inner{width:980px; margin:0 auto; 
+			a{color:$main-gray; display: inline-block; vertical-align: middle; font-size:.7em!important; width:auto; letter-spacing:1px;
+				&:hover{color:$main-blue;}
+			}
+			a.active{color:$main-blue;}
+		}
+	}
+}
