@@ -53,7 +53,7 @@ return array(
 		),
 
 		'mysql' => array(
-			'driver'    => 'mysql',
+			'driver'    => 'mysql', 
 			'host'      => 'localhost',
 			'database'  => 'cacermar_WebSantoscoy',
 			'username'  => 'cacermar_stcoy',
