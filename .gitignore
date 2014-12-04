@@ -7,3 +7,4 @@ dadelion.yml
 .env.php
 .DS_Store
 Thumbs.db
+deploy.ini
