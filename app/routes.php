@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('pages.index');
-});
-
-
 
 
 
@@ -46,6 +40,8 @@ Route::group(array('prefix'=>'admin'), function(){
 	Route::controller('/', 'admin_ProyectosController');
 		
 });
+
+Route::controller('/', 'HomeController');
 
 /*
 //NUEVO - CREAR - INSERT

@@ -3,7 +3,7 @@
   	<header>
 	  	<nav>
 		  	<ul>
-			  	<li><a href="">PROYECTOS</a></li>
+			  	<li><a href="" class="proyectos">PROYECTOS</a></li>
 			  	<li><a href="" class="taller">TALLER</a></li>
 			  	<li><a href="" class="editorial">EDITORIAL</a></li>
 			  	<li><a href="" class="contacto">CONTACTO</a></li>

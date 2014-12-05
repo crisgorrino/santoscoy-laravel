@@ -22,6 +22,8 @@ class admin_ProyectosController extends BaseController {
 							  ->publishedNotRemoved()
 							  ->orderBy('created_at', 'desc')
 							  ->orderBy('id', 'desc');
+		//echo "<pre>";		  
+		//dd( print_r(get_class_methods($proyectos) ) );
 						
 		$campo		= Winput::get('campo');
 		$search		= Winput::get('search');
