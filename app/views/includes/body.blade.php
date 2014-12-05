@@ -18,14 +18,7 @@
 		  
 		  <div class="conceptos">
 		  	<div class="conceptos-inner">
-			  <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - <a href="">HAIGH PARK QUERETARO</a> -  
-			  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  
-			  <a href="">LOBBY</a> - <a href="" class="active">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - 
-			  <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> -
-			  <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - <a href="">HAIGH PARK QUERETARO</a> -  
-			  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  
-			  <a href="">LOBBY</a> - <a href="">HAIGH PARK QUERETARO</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - 
-			  <a href="">TORRE PÓRTICA</a> -  <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a> - <a href="">LOBBY</a> - <a href="">TORRE PÓRTICA</a> -  <a href="">LOBBY</a>
+            	{{ $lista_proyectos }}
 		  	</div>
 		  </div>		  
 	  </div>
@@ -33,8 +26,9 @@
 	  
 	  <!--main gallery-->
 	   <div class="main-gal">
-	   		<span>14 / 27</span>	
-		  <img src="{{ asset('images/proyectos/proyecto-main.jpg') }}" alt="HAIGH PARK QUERETARO">
+	   		<span><a id="no_proyecto">1</a> / {{ $proyectos->count() }}</span>	
+            <?php $primer_imagen = $proyectos->first()->imagenes->first(); ?>
+		  <img src="{{ asset($primer_imagen->path.$primer_imagen->archivo) }}" alt="HAIGH PARK QUERETARO">
 		  
 		  <div class="titulo-main">
 		  	<h3>HAIGH PARK QUERETARO</h3>

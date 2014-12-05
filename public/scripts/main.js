@@ -18,6 +18,14 @@ $(document).ready(function(){
 		$('.busqueda-cont').slideUp('slow');
 	})
 	
+	//proyectos toggle
+	$('.proyectos').click(function(e){
+		e.preventDefault();
+		
+		$('.section-pages-cont').children('div').slideUp('slow');
+		//$('.section-pages-cont').children('div').siblings().hide();
+		
+	});
 	
 	//contacto toggle
 	$('.contacto').click(function(e){
