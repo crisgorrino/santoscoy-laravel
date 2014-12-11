@@ -1,7 +1,11 @@
 <?php
 
 class BaseController extends Controller {
-
+	
+	//### Variable Default ###//
+	public $proyectName='Santoscoy'; 	//Se vera en algunas salidas de Email principalmente
+	public $pathUpload='uploads/'; 	//Carpeta default para subir archivos
+	
 	/**
 	 * Setup the layout used by the controller.
 	 *

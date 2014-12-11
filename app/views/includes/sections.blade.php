@@ -66,7 +66,7 @@
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 1</br>PREPARACI&Oacute;N</span>
+	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
 	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
 	  	 				</p>
 	  	 			</h4>
@@ -74,7 +74,7 @@
 	  	 			<h4 class="cruz" style="top:125px; left:750px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 2</br>INCUBACI&Oacute;N</span>
+	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
 	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
 	  	 				</p>
 	  	 			</h4>
@@ -82,7 +82,7 @@
 	  	 			<h4 class="cruz" style="top:200px; left:200px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 3</br>ILUMINACI&Oacute;N</span>
+	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
 	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
 	  	 				</p>
 	  	 			</h4>
@@ -90,7 +90,7 @@
 	  	 			<h4 class="cruz" style="top:270px; left:550px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 4</br>VERIFICACI&Oacute;N</span>
+	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
 	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
 	  	 				</p>
 	  	 			</h4>
@@ -203,7 +203,7 @@
 		 	<div class="resultado cf">
 			 	<h5>
 				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA</br>
+				 	ARQUITECTURA<br>
 				 	INTERIORISMO 2014
 			 	</h5>
 			 	
@@ -225,7 +225,7 @@
 		 	<div class="resultado cf">
 			 	<h5>
 				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA</br>
+				 	ARQUITECTURA<br>
 				 	INTERIORISMO 2014
 			 	</h5>
 			 	
@@ -247,7 +247,7 @@
 		 	<div class="resultado cf">
 			 	<h5>
 				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA</br>
+				 	ARQUITECTURA<br>
 				 	INTERIORISMO 2014
 			 	</h5>
 			 	

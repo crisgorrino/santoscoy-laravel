@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return array(
 	|
 	*/
 
-	'timezone' => 'UTC',
+	'timezone' => 'America/Mexico_City',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'es',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'LULpoYFCJ59zIze6y1TUCG90ZtJi5jbr',
+	'key' => 'ghzBeuHSr709bjw89Niw87phoEPNaOuO',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -96,7 +96,11 @@ return array(
 	'providers' => array(
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
-		'Illuminate\Auth\AuthServiceProvider',
+		
+		//'Illuminate\Auth\AuthServiceProvider',
+		//Multi Auth
+		'Ollieread\Multiauth\MultiauthServiceProvider',
+		
 		'Illuminate\Cache\CacheServiceProvider',
 		'Illuminate\Session\CommandsServiceProvider',
 		'Illuminate\Foundation\Providers\ConsoleSupportServiceProvider',
@@ -110,7 +114,10 @@ return array(
 		'Illuminate\Log\LogServiceProvider',
 		'Illuminate\Mail\MailServiceProvider',
 		'Illuminate\Database\MigrationServiceProvider',
-		'Illuminate\Pagination\PaginationServiceProvider',
+		
+		//'Illuminate\Pagination\PaginationServiceProvider',
+		'DeSmart\Pagination\PaginationServiceProvider',
+		
 		'Illuminate\Queue\QueueServiceProvider',
 		'Illuminate\Redis\RedisServiceProvider',
 		'Illuminate\Remote\RemoteServiceProvider',
@@ -125,7 +132,9 @@ return array(
 		//deubg bar
 		'Barryvdh\Debugbar\ServiceProvider',
 		
-
+		//Sanitize
+		'Weboap\Winput\WinputServiceProvider',
+		
 	),
 
 	/*
@@ -186,6 +195,7 @@ return array(
 		'Schema'            => 'Illuminate\Support\Facades\Schema',
 		'Seeder'            => 'Illuminate\Database\Seeder',
 		'Session'           => 'Illuminate\Support\Facades\Session',
+		'Sess'           	=> 'Illuminate\Support\Facades\Session',
 		'SoftDeletingTrait' => 'Illuminate\Database\Eloquent\SoftDeletingTrait',
 		'SSH'               => 'Illuminate\Support\Facades\SSH',
 		'Str'               => 'Illuminate\Support\Str',

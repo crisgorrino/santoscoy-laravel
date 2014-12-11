@@ -34,8 +34,8 @@ App::after(function($request, $response)
 */
 
 Route::filter('auth', function()
-{
-	if (Auth::guest())
+{		
+	if (Auth::user()->guest())
 	{
 		if (Request::ajax())
 		{
@@ -43,8 +43,15 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::guest('admin/login');
 		}
+	}elseif(Auth::user()->check()){
+		$usuario = Auth::user()->get();
+		if( $usuario->nivel_id != 1 ){
+			Auth::user()->logout();
+			return Redirect::guest('admin/login');
+		}
+		
 	}
 });
 
