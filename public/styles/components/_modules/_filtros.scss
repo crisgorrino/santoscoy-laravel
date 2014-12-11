@@ -1,5 +1,5 @@
 //filtros
-.filtros{text-align:center; padding:5% 0 0 0; position:relative; z-index:3; background-color: rgba(0, 0, 0, 0.4);
+.filtros{text-align:center; padding:5% 0 0 0; position:relative; z-index:3; background-color: rgba(0, 0, 0, 0.6);
 	a{letter-spacing:2px;font-size:.8em; text-decoration:none; display:inline-block; color:$main-gray; width:320px;
 	-webkit-filter: grayscale(1); filter: grayscale(1);opacity:1;transition:all 0.5s ease;
 	&:hover{-webkit-filter: grayscale(0); filter: grayscale(0);opacity:1; color:$main-blue; transition:all 0.5s ease;}
