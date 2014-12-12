@@ -178,10 +178,10 @@
 	  @show
 	  @section('busqueda')
 	  <div class="busqueda-cont cf">
-		 <form class="cf">
+		 <form class="cf" id="frm_search" name="frm_search" method="post">
 		 	
 		 	<div class="inner cf">
-			 	<p class="left"><label>BUSCAR</label> <input type="text" placeholder="LOBBY 33"></p> 
+			 	<p class="left"><label>BUSCAR</label> <input type="text" id="search" name="search" placeholder="LOBBY 33"></p> 
 			 	<!--<span class="close-busq right">CERRAR X</span>-->
 		 	</div>
 		 	 	
@@ -211,7 +211,7 @@
 		 	</div>
 			<!--resultado 1-->
 			
-			<!--resultado 1-->
+			<!--resultado 2-->
 		 	<div class="resultado cf">
 			 	<h5>
 				 	<strong>LOBBY 33</strong>
@@ -231,9 +231,9 @@
 			 	</div>
 			 	<a href="#">VER MAS</a>
 		 	</div>
-			<!--resultado 1-->
+			<!--resultado 2-->
 			
-			<!--resultado 1-->
+			<!--resultado 3-->
 		 	<div class="resultado cf">
 			 	<h5>
 				 	<strong>LOBBY 33</strong>
@@ -253,7 +253,7 @@
 			 	</div>
 			 	<a href="#">VER MAS</a>
 		 	</div>
-			<!--resultado 1-->
+			<!--resultado 3-->
 			 
 		 </div>
 		  <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">

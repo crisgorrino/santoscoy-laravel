@@ -242,10 +242,39 @@ class HomeController extends BaseController {
 	}
 	
 	/**
+	* Obtener registros de busqueda
+	*
+	*/
+	public function postAjax_search()
+	{
+		
+		if( Request::ajax() ){
+			$limit=6;//default 6
+			
+			$proyectos = Proyectos::where(function($where){
+									
+									
+									
+								  })
+								  ->take($limit)
+								  ->get();
+			
+			//Obtener plantilla de listado de inmuebles
+			return Response::json(View::make('search.ajax_search_list', 
+				array(
+					'proyectos'=>$proyectos,
+				)
+			 )->render());
+			 
+		}
+		 
+	}
+	
+	/**
 	*
 	*
 	*/
-	public function listaProyectos()
+	/*public function listaProyectos()
 	{
 		
 		$lista_proyectos = ''; 
@@ -259,6 +288,6 @@ class HomeController extends BaseController {
 			$lista_proyectos = strtoupper(substr($lista_proyectos, 0, -3));
 		}
 		
-	}
+	}*/
 
 }

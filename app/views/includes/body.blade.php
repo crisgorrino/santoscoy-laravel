@@ -59,13 +59,13 @@
 		<!-- DETALLES SIDE BOX -->
 		  <div class="side-box">
 			  <ul class="proy-tags">
-				 <li><a href="">ARQUITECTURA</br> <span id="arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</span></a></li>
-				 <li><a href="">LOCACION</br> <span id="locacion">{{ strtoupper($primer_proyecto->locacion) }}</span></a></li>
-				 <li><a href="">TIPOLOGÍA</br> <span id="tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span></a></li>
-				 <li><a href="">CLIENTE</br> <span id="cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></a></li>
-				 <li><a href="">STATUS</br> <span id="status">{{ strtoupper($primer_proyecto->status) }}</span></a></li>
-				 <li><a href="">ASOCIADO</br> <span id="asociado">{{ strtoupper($primer_proyecto->asociado) }}</span></a></li>
-				 <li><a href="">DIMENSIÓN</br> <span id="dimension">{{ strtoupper($primer_proyecto->dimension) }}</span></a></li>
+				 <li><a href="">ARQUITECTURA<br> <span id="arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</span></a></li>
+				 <li><a href="">LOCACION<br> <span id="locacion">{{ strtoupper($primer_proyecto->locacion) }}</span></a></li>
+				 <li><a href="">TIPOLOGÍA<br> <span id="tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span></a></li>
+				 <li><a href="">CLIENTE<br> <span id="cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></a></li>
+				 <li><a href="">STATUS<br> <span id="status">{{ strtoupper($primer_proyecto->status) }}</span></a></li>
+				 <li><a href="">ASOCIADO<br> <span id="asociado">{{ strtoupper($primer_proyecto->asociado) }}</span></a></li>
+				 <li><a href="">DIMENSIÓN<br> <span id="dimension">{{ strtoupper($primer_proyecto->dimension) }}</span></a></li>
 			  </ul>
 			  
 			  <span class="vista">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
@@ -115,4 +115,4 @@
 		</div>  	  
   </div>
   
-  @show
+@show

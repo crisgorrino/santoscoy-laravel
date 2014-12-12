@@ -181,6 +181,60 @@
 		});
     });
 	
+	var timeout;
+	$('body').on('keyup', '#search', function(e){
+		if(timeout) {
+			clearTimeout(timeout);
+			timeout = null;
+		}
+		timeout = setTimeout(function(){ busqueda(); }, 800);
+	});
+	
+	function busqueda()
+	{
+		$.ajax({
+			type:		'post',
+			cache:		false,
+			dataType:	"json",
+			url:		"{{ url('ajax-search') }}",
+			data:		$('#frm_search').serialize(),
+			beforeSend: function(){
+				//
+				$('.busqueda-resultados').slideUp('slow', function(){
+					$(this).html('');
+				});
+				
+			},
+			
+			error: function(){
+				alert('Tuvimos un inconveniente, por favor intenta nuevamente');
+			},
+			
+			success: function(data){
+				
+				if( data.success == true )
+				{
+					$('.busqueda-resultados').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+						
+						//spinner.stop();
+						// Animation complete.
+						$(this).html(function(){
+							$(this).show();
+							$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+							
+							return data;
+							
+						});
+					});
+				}
+				
+				
+			},
+			
+		});
+		
+	}
+	
 	//Obtener imagen aleatoria
 	function changeBG(){
 		$.ajax({
