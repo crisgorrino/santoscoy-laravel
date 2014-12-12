@@ -249,7 +249,7 @@ class HomeController extends BaseController {
 	{
 		
 		if( Request::ajax() and Input::has('search') ){
-			$limit=6;//default 6
+			$limit=3;//default 3
 			
 			$proyectos = Proyectos::where(function($where){
 				
@@ -292,6 +292,7 @@ class HomeController extends BaseController {
 								  })
 								  ->take($limit)
 								  ->get();
+								  
 			
 			//Obtener plantilla de listado de inmuebles
 			return Response::json(array(

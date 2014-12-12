@@ -19,7 +19,7 @@
                         <div class="row fileupload-buttonbar">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label>Im&aacute;genes (m&aacute;ximo de 1000px de ancho y m&aacute;ximo de 425px alto)</label><br>
+                                    <label>Im&aacute;genes (m&aacute;ximo de 1000px de ancho y 1000px de alto y m&iacute;nimo de 425px ancho y 425px alto)</label><br>
                                     <span class="btn btn-success fileinput-button">
                                         <i class="glyphicon glyphicon-plus"></i>
                                         <span>Agregar im&aacute;genes...</span>

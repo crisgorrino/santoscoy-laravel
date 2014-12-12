@@ -7,6 +7,10 @@
 	<!--<script src="{{ asset('scripts/jquery.tinycarousel.js') }}" type="text/javascript"></script>-->
 	<script type="text/javascript" src="{{ asset('scripts/jquery.jcarousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('scripts/carousel.js') }}"></script>
+    
+    <script type="text/javascript" src="{{ asset('js/jquery.highlight.js') }}"></script>
+    <?php /*?><script type="text/javascript" src="{{ asset('js/jquery.highlight-4.js') }}"></script><?php */?>
+    <?php /*?><script type="text/javascript" src="{{ asset('js/jquery.highlight-4.closure.js') }}"></script><?php */?>
 	
 	<script type="text/javascript">
 	    $(document).ready( function() {
@@ -47,7 +51,6 @@
 				url:		"{{ url('ajax-proyecto-detalles') }}",
 				data:		'p_id='+mi.data('p_id'),
 				beforeSend: function(){
-					
 				},
 				
 				error: function(){
@@ -59,6 +62,7 @@
 					
 					if( data.success == true )
 					{
+						
 						$('.conceptos .ver_detalle').removeClass('active');
 						mi.addClass('active');
 						
@@ -113,6 +117,7 @@
 							}
 						}
 						
+						$('.section-pages-cont').children('div').slideUp('slow');
 					}
 					
 					
@@ -200,8 +205,8 @@
 			data:		$('#frm_search').serialize(),
 			beforeSend: function(){
 				//
-				$('.busqueda-resultados').slideUp('slow', function(){
-					$(this).html('');
+				$('.busqueda-resultados').slideUp('slow').promise().done(function(){
+					//$(this).html('');
 				});
 				
 			},
@@ -211,20 +216,26 @@
 			},
 			
 			success: function(data){
-				
+				//alert(data.view);
 				if( data.success == true )
 				{
-					$('.busqueda-resultados').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+					$('.busqueda-resultados').html(data.view).promise().done(function(){
+						var busqueda = $('#search').val();
+						var expr1 = /[^A-Za-zñÑáéíóúÁÉÍÓÚ0-9 ]/;
+						var expr2 = /[ ]+/;
+						busqueda = busqueda.replace(expr1, '');
+						busqueda = busqueda.replace(expr2, ' ');
 						
-						//spinner.stop();
-						// Animation complete.
-						$(this).html(function(){
-							$(this).show();
-							$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
-							
-							return data.view;
-							
+						var json = (busqueda.split(' '));
+						//alert(json);
+						$(".busqueda-resultados").highlight(json, { 
+							caseSensitive: false,
+							element: 'span', 
+							className: 'highlight-search',
 						});
+							
+						$(this).slideDown('slow');
+						
 					});
 				}
 				

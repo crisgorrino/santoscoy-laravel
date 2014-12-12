@@ -8,7 +8,7 @@
                 {{ $value->arquitectura }}
             </h5>
             
-            <p>{{ wordwrap($value->descripcion, 100) }}<span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
+            <p>{{ wordwrap($value->descripcion, 100) }}<?php /*?><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla<?php */?></p>
             
             <div class="detalles">
                 <p>locación: {{ $value->locacion }}</p>
@@ -18,7 +18,7 @@
                 <p>asociado: {{ $value->asociado }}</p>
                 <p>dimensión: {{ $value->dimension }}</p>  
             </div>
-            <a href="#">VER MAS</a>
+            <a href="" class="ver_detalle" data-pos="" data-p_id="{{ $value->id }}">VER MAS</a>
         </div>
     <!--resultados -->
     @endforeach

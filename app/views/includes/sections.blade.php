@@ -187,75 +187,7 @@
             
      </form>
      
-     <div class="busqueda-resultados">
-        
-        <?php /*?><!--resultado 1-->
-        <div class="resultado cf">
-            <h5>
-                <strong>LOBBY 33</strong>
-                ARQUITECTURA<br>
-                INTERIORISMO 2014
-            </h5>
-            
-            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-            
-            <div class="detalles">
-                <p>locación: méxico DF</p>
-                <p>tipología: habitacional</p>
-                <p>cliente: fullconcept</p>
-                <p>status: completo</p>
-                <p>asociado: bdp</p>
-                <p>dimensión: 1000m2-</p>  
-            </div>
-            <a href="#">VER MAS</a>
-        </div>
-        <!--resultado 1-->
-        
-        <!--resultado 2-->
-        <div class="resultado cf">
-            <h5>
-                <strong>LOBBY 33</strong>
-                ARQUITECTURA<br>
-                INTERIORISMO 2014
-            </h5>
-            
-            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-            
-            <div class="detalles">
-                <p>locación: méxico DF</p>
-                <p>tipología: habitacional</p>
-                <p>cliente: fullconcept</p>
-                <p>status: completo</p>
-                <p>asociado: bdp</p>
-                <p>dimensión: 1000m2-</p>  
-            </div>
-            <a href="#">VER MAS</a>
-        </div>
-        <!--resultado 2-->
-        
-        <!--resultado 3-->
-        <div class="resultado cf">
-            <h5>
-                <strong>LOBBY 33</strong>
-                ARQUITECTURA<br>
-                INTERIORISMO 2014
-            </h5>
-            
-            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-            
-            <div class="detalles">
-                <p>locación: méxico DF</p>
-                <p>tipología: habitacional</p>
-                <p>cliente: fullconcept</p>
-                <p>status: completo</p>
-                <p>asociado: bdp</p>
-                <p>dimensión: 1000m2-</p>  
-            </div>
-            <a href="#">VER MAS</a>
-        </div>
-        <!--resultado 3--><?php */?>
-         
-     </div>
+     <div class="busqueda-resultados"></div>
       <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">
   </div>
   @show	  

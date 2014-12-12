@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('.contact-cont').hide();
 	$('.busqueda-cont').hide()
 	
-	var time = 1250;
+	var time = 1050;
 	//general close button
 	$('.close').click(function(){
 		$(this).parent().slideUp('slow');
@@ -21,8 +21,9 @@ $(document).ready(function(){
 	//proyectos toggle
 	$('.proyectos').click(function(e){
 		e.preventDefault();
-		
+		scrollTop();
 		$('.section-pages-cont').children('div').slideUp(time);
+		
 		//$('.section-pages-cont').children('div').siblings().hide();
 		
 	});
@@ -30,8 +31,9 @@ $(document).ready(function(){
 	//contacto toggle
 	$('.contacto').click(function(e){
 		e.preventDefault();
+		scrollTop();
 		$('.contact-cont').siblings().slideUp(time).promise().done(function(){
-			$('.contact-cont').slideDown(time);
+			$('.contact-cont').slideToggle(time);
 		});
 		
 		//$('.contact-cont').siblings().hide();
@@ -40,24 +42,28 @@ $(document).ready(function(){
 	//busqueda toggle
 	$('.busqueda').click(function(e){
 		e.preventDefault();
+		scrollTop();
 		$('.busqueda-cont').siblings().slideUp(time).promise().done(function(){
-			$('.busqueda-cont').slideDown(time);
+			$('.busqueda-cont').slideToggle(time);			
 		});
 	});
 	
 	//taller toggle
 	$('.taller').click(function(e){
 		e.preventDefault();
+		scrollTop();
 		$('.taller-cont').siblings().slideUp(time).promise().done(function(){
-			$('.taller-cont').slideDown(time);
+			$('.taller-cont').slideToggle(time);
+			
 		});
 	});
 	
 	//taller toggle
 	$('.editorial').click(function(e){
 		e.preventDefault();
-		$('.editorial-cont').siblings().slideUp(1250).promise().done(function(){
-			$('.editorial-cont').slideDown(1250);
+		scrollTop();
+		$('.editorial-cont').siblings().slideUp(time).promise().done(function(){
+			$('.editorial-cont').slideToggle(time);			
 		});
 	});
 
@@ -87,3 +93,9 @@ $(document).ready(function(){
 	});
 	
 });
+
+function scrollTop(){
+	$('html, body').animate({
+		scrollTop: $("body").offset().top
+	}, 1000);
+}
