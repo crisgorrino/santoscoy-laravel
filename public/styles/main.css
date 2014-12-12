@@ -531,7 +531,8 @@ footer {
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     text-align: left;
-    color: #bdbec1; }
+    color: #bdbec1;
+    margin-top: 40px; }
     .filtros .conceptos .conceptos-inner {
       width: 980px;
       margin: 0 auto; }
@@ -631,7 +632,7 @@ footer {
     display: inline-block;
     vertical-align: top;
     max-width: 45%;
-    margin: 4%; }
+    margin: 2%; }
     .detalle-imgs .img-cont img {
       display: block;
       width: 100%; }

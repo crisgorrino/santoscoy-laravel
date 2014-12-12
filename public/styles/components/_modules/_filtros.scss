@@ -8,7 +8,7 @@
 	
 	a.active{-webkit-filter: grayscale(0); filter: grayscale(0);opacity:1; color:$main-blue;}
 	
-	.conceptos{width:100%;padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors;text-align:left; color:$main-gray;
+	.conceptos{width:100%;padding:1% 0; border-top:1px solid $border-colors; border-bottom:1px solid $border-colors;text-align:left; color:$main-gray; margin-top: 40px;
 		.conceptos-inner{width:980px; margin:0 auto; 
 			a{color:$main-gray; display: inline-block; vertical-align: middle; font-size:.7em!important; width:auto; letter-spacing:1px;
 				&:hover{color:$main-blue;}
