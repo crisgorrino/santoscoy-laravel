@@ -4,11 +4,26 @@
   @section('editorial')  
   	<div class="editorial-cont cf">
   		<div class="modal-detalle">
-      
+      		<div class="slide-container">
+	  	 	<div id="slider1" class="jcarousel-wrapper">	
+				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
+				<div class="viewport jcarousel">
+					<ul class="overview">
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
+
+					</ul>
+				</div>
+				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>
+		    </div>
+  	 	</div>	
+  	 	<!--SLIDER-->
 	    </div>
  	 	<div class="top cf"> 
  	 		<div class="inner"> 	 		
-	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
+	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista-black.png') }}" alt="[]"></span>
  	 		</div>	
   	 	</div>
   	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>

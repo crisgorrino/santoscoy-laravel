@@ -1,12 +1,12 @@
-
 $(document).ready(function(){
 	//hide menu divs
 	$('.taller-cont').hide();
 	$('.editorial-cont').hide();
 	$('.contact-cont').hide();
 	$('.busqueda-cont').hide()
-	
+
 	var time = 1050;
+
 	//general close button
 	$('.close').click(function(){
 		$(this).parent().slideUp('slow');
@@ -17,7 +17,7 @@ $(document).ready(function(){
 	$('.close-busq').click(function(){
 		$('.busqueda-cont').slideUp('slow');
 	})
-	
+
 	//proyectos toggle
 	$('.proyectos').click(function(e){
 		e.preventDefault();

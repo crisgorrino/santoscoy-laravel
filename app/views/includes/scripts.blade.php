@@ -13,11 +13,27 @@
     <?php /*?><script type="text/javascript" src="{{ asset('js/jquery.highlight-4.closure.js') }}"></script><?php */?>
 	
 	<script type="text/javascript">
+		var activeEditorial = false;
 	    $(document).ready( function() {
-	      $('#tab-container').easytabs();
+	    $('#tab-container').easytabs();
+
+	      //Vista button
+		$('.vista-gray').click(function(e){
+			e.preventDefault();
+			if(activeEditorial == false){
+				$(this).html('CERRAR <span class="cerrar">x</span>');
+				activeEditorial = true;
+			}
+			else if(activeEditorial == true){
+				var rutaImg='{{asset("images/vista-black.png")}}';
+				$(this).html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+				activeEditorial=false;
+			}
+			$('.modal-detalle').toggleClass('active');
+		})
+
 	    });
     </script>
-    
     <script type="text/javascript">
 		/*$(document).ready(function()
 		{
