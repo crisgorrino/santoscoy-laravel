@@ -21,7 +21,8 @@
 		$('.vista-gray').click(function(e){
 			e.preventDefault();
 			if(activeEditorial == false){
-				$(this).html('CERRAR <span class="cerrar">x</span>');
+				var rutaImg='{{asset("images/close.png")}}';
+				$(this).html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
 				activeEditorial = true;
 			}
 			else if(activeEditorial == true){
