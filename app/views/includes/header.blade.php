@@ -7,7 +7,7 @@
 			  	<li><a href="" class="taller">TALLER</a></li>
 			  	<li><a href="" class="editorial">EDITORIAL</a></li>
 			  	<li><a href="" class="contacto">CONTACTO</a></li>
-			  	<li><a href="" class="busqueda">BUSQUEDA</a></li>
+			  	<li><a href="" class="busqueda">BÚSQUEDA</a></li>
 		  	</ul>
 		  	<div class="logo-cont cf">
 		  		<div class="inner">

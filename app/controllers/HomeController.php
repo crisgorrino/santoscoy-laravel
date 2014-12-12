@@ -248,23 +248,61 @@ class HomeController extends BaseController {
 	public function postAjax_search()
 	{
 		
-		if( Request::ajax() ){
+		if( Request::ajax() and Input::has('search') ){
 			$limit=6;//default 6
 			
 			$proyectos = Proyectos::where(function($where){
-									
-									
+				
+										//Limpiar cadena
+										//Array posición 0 limpia caracteres diferentes de letras, numeros y espacios
+										//Array posición 1 reemplaza multiples espacios intermedios en blanco 
+										//por uno solo espacio intermedio
+										//Aplicar trim a la cadena
+										$search = trim(preg_replace(
+											array(
+												'/[^A-Za-zñÑáéíóúÁÉÍÓÚ0-9 ]/',
+												'/[ ]+/'
+											), 
+											array(
+												'',
+												' '
+											), Winput::get('search') ));
+										
+										$arrSearch = explode(' ', $search);
+										
+										//$arrSearch = array(Winput::get('search'));
+										$limite=8;
+										$i=1;
+										foreach($arrSearch as $value){
+											if( $i==$limite ) break;
+											
+											$where->orWhere('titulo', 'LIKE', '%'.$value.'%')
+												  ->orWhere('arquitectura', 'LIKE', '%'.$value.'%')
+												  ->orWhere('descripcion', 'LIKE', '%'.$value.'%')
+												  ->orWhere('locacion', 'LIKE', '%'.$value.'%')
+												  ->orWhere('tipologia', 'LIKE', '%'.$value.'%')
+												  ->orWhere('cliente', 'LIKE', '%'.$value.'%')
+												  //->orWhere('status', 'LIKE', '%'.$value.'%')
+												  ->orWhere('asociado', 'LIKE', '%'.$value.'%')
+												  //->orWhere('dimension', 'LIKE', '%'.$value.'%')
+												  ;
+											$i++;
+										}
 									
 								  })
 								  ->take($limit)
 								  ->get();
 			
 			//Obtener plantilla de listado de inmuebles
-			return Response::json(View::make('search.ajax_search_list', 
-				array(
-					'proyectos'=>$proyectos,
+			return Response::json(array(
+				'success'	=> true,
+				'view'		=> View::make('search.ajax_search_list', 
+									array(
+										'proyectos'=>$proyectos,
+									)
+								 )->render()
 				)
-			 )->render());
+		    );
 			 
 		}
 		 

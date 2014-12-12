@@ -1,8 +1,7 @@
-
- <!--section pages-->
-  <div class="section-pages-cont">
+<!--section pages-->
+<div class="section-pages-cont">
 	
-	@section('editorial')  
+  @section('editorial')  
   	<div class="editorial-cont cf">
  	 	<div class="top cf"> 
  	 		<div class="inner"> 	 		
@@ -122,144 +121,144 @@
 	  	 	</ul>  	 	
 	    </div>
   	 </div>
-	  @show
+  @show
 	  
-	  @section('contacto')
-	  <div class="contact-cont cf">
-	  	
-	  	<div class="inner cf">
-		  	<h2 class="left">Contacto</h2> <!--<span class="close right">CERRAR X</span>-->
-		</div>  	
-			 <nav>
-			 	<div class="inner cf">
-					 <ul>
-						 <li><a href="">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
-						 <li><a href="">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-						 <li><a href="">CONTACTANOS <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-					 </ul>
-			 	</div>	 
-			 </nav> 
+  @section('contacto')
+  <div class="contact-cont cf">
+    
+    <div class="inner cf">
+        <h2 class="left">Contacto</h2> <!--<span class="close right">CERRAR X</span>-->
+    </div>  	
+         <nav>
+            <div class="inner cf">
+                 <ul>
+                     <li><a href="">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
+                     <li><a href="">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
+                     <li><a href="">CONTACTANOS <img src="{{ asset('images/contacto/email.png') }}"></a></li>
+                 </ul>
+            </div>	 
+         </nav> 
 
-	  	
-		 <div class="contact-inner">
-		 	<!--info contacto-->
-			 <div class="contact-info">
-				 <p>SANTOSCOY ARQUITECTOS</p>
-				 <p>T. +33.3627.5594 / 95</p>
-				 <p>carlossantoscoy@santoscoyarquitectos.com</p>
-				 <p>www.santoscoyarquitectos.com</p>
-				 <p>Av. paraisos 170</p>
-				 <p>ciudad granja</p>
-				 <p>zap., jal., mx. cp 45010</p>
-			 </div>
-			 <!--info contacto-->
-			 
-			 <!-- Carlos Santoscoy-->
-			 <div class="carlossantoscoy">
-				 <h4>CARLOS SANTOSCOY</h4>
-			 </div>
-			 <!-- Carlos Santoscoy-->
-			 
-			 <!--REDES-->
-			 <div class="redes">
-				<a href="">TWITTER</a>
+    
+     <div class="contact-inner">
+        <!--info contacto-->
+         <div class="contact-info">
+             <p>SANTOSCOY ARQUITECTOS</p>
+             <p>T. +33.3627.5594 / 95</p>
+             <p>carlossantoscoy@santoscoyarquitectos.com</p>
+             <p>www.santoscoyarquitectos.com</p>
+             <p>Av. paraisos 170</p>
+             <p>ciudad granja</p>
+             <p>zap., jal., mx. cp 45010</p>
+         </div>
+         <!--info contacto-->
+         
+         <!-- Carlos Santoscoy-->
+         <div class="carlossantoscoy">
+             <h4>CARLOS SANTOSCOY</h4>
+         </div>
+         <!-- Carlos Santoscoy-->
+         
+         <!--REDES-->
+         <div class="redes">
+            <a href="">TWITTER</a>
 
-				<a href="">FACEBOOK</a>
+            <a href="">FACEBOOK</a>
 
-				<a href="">GOOGLE+</a>
+            <a href="">GOOGLE+</a>
 
-				<a href="">PINTEREST</a>
-			 </div>
-			 <!--REDES-->
-			 
-		 </div>
-		 
-	  </div>
-	  @show
-	  @section('busqueda')
-	  <div class="busqueda-cont cf">
-		 <form class="cf" id="frm_search" name="frm_search" method="post">
-		 	
-		 	<div class="inner cf">
-			 	<p class="left"><label>BUSCAR</label> <input type="text" id="search" name="search" placeholder="LOBBY 33"></p> 
-			 	<!--<span class="close-busq right">CERRAR X</span>-->
-		 	</div>
-		 	 	
-		 </form>
-		 
-		 <div class="busqueda-resultados">
-		 	
-		 	<!--resultado 1-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 1-->
-			
-			<!--resultado 2-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 2-->
-			
-			<!--resultado 3-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 3-->
-			 
-		 </div>
-		  <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">
-	  </div>
-
-	@show	  
-	  
+            <a href="">PINTEREST</a>
+         </div>
+         <!--REDES-->
+         
+     </div>
+     
   </div>
-  <!--section pages-->
+  @show
+  
+  @section('busqueda')
+  <div class="busqueda-cont cf">
+     <form class="cf" id="frm_search" name="frm_search" method="post">
+        
+        <div class="inner cf">
+            <p class="left"><label>BUSCAR</label> <input type="text" id="search" name="search" placeholder="LOBBY 33"></p> 
+            <!--<span class="close-busq right">CERRAR X</span>-->
+        </div>
+            
+     </form>
+     
+     <div class="busqueda-resultados">
+        
+        <?php /*?><!--resultado 1-->
+        <div class="resultado cf">
+            <h5>
+                <strong>LOBBY 33</strong>
+                ARQUITECTURA<br>
+                INTERIORISMO 2014
+            </h5>
+            
+            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
+            
+            <div class="detalles">
+                <p>locación: méxico DF</p>
+                <p>tipología: habitacional</p>
+                <p>cliente: fullconcept</p>
+                <p>status: completo</p>
+                <p>asociado: bdp</p>
+                <p>dimensión: 1000m2-</p>  
+            </div>
+            <a href="#">VER MAS</a>
+        </div>
+        <!--resultado 1-->
+        
+        <!--resultado 2-->
+        <div class="resultado cf">
+            <h5>
+                <strong>LOBBY 33</strong>
+                ARQUITECTURA<br>
+                INTERIORISMO 2014
+            </h5>
+            
+            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
+            
+            <div class="detalles">
+                <p>locación: méxico DF</p>
+                <p>tipología: habitacional</p>
+                <p>cliente: fullconcept</p>
+                <p>status: completo</p>
+                <p>asociado: bdp</p>
+                <p>dimensión: 1000m2-</p>  
+            </div>
+            <a href="#">VER MAS</a>
+        </div>
+        <!--resultado 2-->
+        
+        <!--resultado 3-->
+        <div class="resultado cf">
+            <h5>
+                <strong>LOBBY 33</strong>
+                ARQUITECTURA<br>
+                INTERIORISMO 2014
+            </h5>
+            
+            <p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
+            
+            <div class="detalles">
+                <p>locación: méxico DF</p>
+                <p>tipología: habitacional</p>
+                <p>cliente: fullconcept</p>
+                <p>status: completo</p>
+                <p>asociado: bdp</p>
+                <p>dimensión: 1000m2-</p>  
+            </div>
+            <a href="#">VER MAS</a>
+        </div>
+        <!--resultado 3--><?php */?>
+         
+     </div>
+      <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">
+  </div>
+  @show	  
+	  
+</div>
+<!--section pages-->

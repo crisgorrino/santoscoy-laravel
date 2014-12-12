@@ -222,7 +222,7 @@
 							$(this).show();
 							$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
 							
-							return data;
+							return data.view;
 							
 						});
 					});
