@@ -27,13 +27,8 @@
 @section('sidebar-menu')
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
-        <li class="@yield('menu-ventas-active')">
-            <a href="{{ url('admin/ventas') }}">
-                <i class="fa fa-shopping-cart"></i> <span>Ventas</span>
-            </a>
-        </li>
-        
-        <li class="treeview @yield('menu-proyectos-active')">
+    
+    	<li class="treeview @yield('menu-proyectos-active')">
             <a href="#">
                 <i class="fa fa-th"></i>
                 <span>Proyectos</span>
@@ -41,10 +36,17 @@
             </a>
             <ul class="treeview-menu">
                 <li class="@yield('proyectos-active')"><a href="{{ url('admin/proyectos') }}"><i class="fa fa-angle-double-right"></i> Administrar Proyectos</a></li>
-                <li class="@yield('categorias-active')"><a href="{{ url('admin/proyectos/categorias') }}"><i class="fa fa-angle-double-right"></i> Administrar Categor&iacute;as</a></li>
             </ul>
             
         </li>
+        
+        <li class="@yield('menu-edotorial-active')">
+            <a href="{{ url('admin/editorial') }}">
+                <i class="fa fa-paperclip"></i> <span>Editorial</span>
+            </a>
+        </li>
+        
+        
         
         <?php /*?><li class="treeview">
             <a href="#">

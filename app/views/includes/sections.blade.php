@@ -9,30 +9,20 @@
 	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
  	 		</div>	
   	 	</div>
-  	 	<span class="counter">14 / 27</span>
+  	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>
   	 	<!--SLIDER-->
   	 	<div class="slide-container">
 	  	 	<div id="slider1" class="jcarousel-wrapper">	
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li><img src="{{ asset('images/editorial/edicion.jpg') }}" alt=""></li>
-						<li>5</li>
-						<li>6</li>
-						<li>7</li>
-						<li>8</li>
-						<li>9</li>
-						<li>10</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
+                    @if( $editorial )
+						<?php $pos = 1 ?>
+                        @foreach( $editorial as $value )
+                            <li class="hover-editorial" data-pos="{{ $pos }}" data-editorial='{{ json_encode($value) }}'><span class="">{{ $value->no_publicacion }}</span></li>
+                            <?php $pos++; ?>
+                        @endforeach
+                    @endif
 					</ul>
 				</div>
 				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>

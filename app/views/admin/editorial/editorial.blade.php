@@ -1,12 +1,12 @@
 @extends('admin.layouts.admin_master')
 
-@section('title') Proyectos @stop
-@section('header-title') <h1>Proyectos <small>Panel de control</small></h1> @stop
-@section('menu-proyectos-active') active @stop
-@section('proyectos-active') active @stop
+@section('title') Editorial @stop
+@section('header-title') <h1>Editorial <small>Panel de control</small></h1> @stop
+@section('menu-editorial-active') active @stop
+@section('editorial-active') active @stop
 
 @section('breadcrumb')
-	<li class="active">Proyectos</li>
+	<li class="active">Editorial</li>
 @stop
 
 @section('content') 
@@ -18,7 +18,7 @@
             <div class="box">
                 <div class="box-header">
                 	<div class="box-tools">
-	                    <a class="btn btn-lg bg-olive" href="{{ url('admin/proyectos/edit') }}"><i class="fa fa-plus-square"></i>&nbsp;Agregar</a>
+	                    <a class="btn btn-lg bg-olive" href="{{ url('admin/editorial/edit') }}"><i class="fa fa-plus-square"></i>&nbsp;Agregar</a>
     	                <a class="btn btn-lg bg-maroon delete_selected"><i class="fa fa-plus-square"></i>&nbsp;Eliminar Seleccionados</a>
                     </div>
                 </div><!-- /.box-header --> 
@@ -26,30 +26,7 @@
                     <form action="" method="post" name="buscador" id="buscador" onsubmit="$.trim($('#search').val());">
                         <br>
                         <table class="admintable" align="center" border="0" width="50%" cellspacing="0" cellpadding="0">
-                        <tbody>
-                            <tr>
-                                <th align="right" nowrap="nowrap">Filtros:&nbsp;</th>
-                                <td colspan="6" align="left">
-                                    <table border="0" width="100%">
-                                        <tr>
-                                            @if( $categorias )
-                                            @if( Input::has('categoria_id') and Input::get('categoria_id') )
-                                            <th style="background-color:#FC9; text-align:right;" align="right">
-                                            @else
-                                            <th style="text-align:right;" align="right">
-                                            @endif
-                                            <label>Categor&iacute;as: </label></th>
-                                            <td>
-                                            	@foreach($categorias as $value)
-                                                    {{ Form::checkbox('categoria_id[]', $value->id, false, array('class'=> 'categoria_chk') ).' '.Form::label('categoria', $value->nombre) }}
-                                                @endforeach
-                                            </td>
-                                            @endif
-                                        </tr>
-                                    </table>
-                                    
-                                </td>
-                            </tr> 
+                        <tbody> 
                             <tr>
                                 <th align="right" nowrap="nowrap">Buscar en:&nbsp;</th>
                                 <td align="left">
@@ -79,14 +56,14 @@
                                 </td>
                                 <td align="left">&nbsp;
                                 <input type="submit" value="Buscar / Filtrar" name="enviar" id="enviar" class="btn btn-default" onclick="$('#buscador').attr('action', ''); $('#buscador').attr('target', '');" />&nbsp;
-                                <input type="button" id="reset" name="reset" value="Restablecer" onclick="$('#buscador').trigger("reset"); <?php /*?>this.form.submit();<?php */?>" class="btn btn-default" />
+                                <input type="button" id="reset" name="reset" value="Restablecer" onclick="$('#buscador').trigger('reset'); <?php /*?>this.form.submit();<?php */?>" class="btn btn-default" />
                                 </td>
                             </tr>
                         </tbody>
                         </table>
                         <p>&nbsp;</p>
                     </form>
-                    @include('admin.proyectos.proyectos_ajax_list')
+                    @include('admin.editorial.editorial_ajax_list')
                 </div>
                 </div><!-- /.box-body -->
             </div><!-- /.box -->
@@ -180,32 +157,21 @@
     <script type="text/javascript" src="{{ asset('js/jquery.lightbox_me.js') }}"></script>
     <!-- Lightbox agregar comentarios -->
     
+    
     <script type="text/javascript">
 	$(document).ready(function(e) {
 		$('body').on('click', '.delete_selected', function(e){
 			e.preventDefault();
-			
-			var total = $('input.checkbox_del:checked').length;
-			
-			if(total <= 0){
-                jAlert('Por favor elige al menos un elemento.', 'Mensaje');
-            }else{
-                
-                jConfirm('&iquest;Est&aacute; seguro de que desea eliminar <b>'+total+'</b> registro(s) seleccionado(s)?\n<b>Advertencia:</b> Tenga Cuidado!', 'Confirmar', function(r){
-					if(r){
-						$('#adminForm').attr('action', '{{ url("admin/proyectos/delete") }}'); 
-						$('#adminForm').submit();
-					}            
-                });
-            }
-			
+			delete_selected();
 		});
 		
-        $('body').on('click', '#checkall', function(){
+        $('body').on('click', '.checkall', function(){
 			if($(this).is(':checked')) {
+				$('.checkall').prop('checked', true);
 				$('.checkbox_del').prop('checked', true);
 			}
 			else{
+				$('.checkall').prop('checked', false);
 				$('.checkbox_del').prop('checked', false);
 			}
 		});
@@ -213,16 +179,110 @@
 		$('body').on('click', '.checkbox_del', function(){
 			
 			if( $(this).not(':checked') ){
-				$('#checkall').prop('checked', false);
+				$('.checkall').prop('checked', false);
 			}
 			
 			if( $('.checkbox_del').length ==  $('input.checkbox_del:checked').length ){
-				$('#checkall').prop('checked', true);
+				$('.checkall').prop('checked', true);
 			}
 			
 			
 		});
+		
+		$('body').on('click', '.delete_one', function(e){
+			e.preventDefault();
+			var id = $(this).data('user_id');
+			
+			$('#fila'+id).find('input:checkbox').prop('checked', true);
+			delete_selected();
+			
+		});
     });
+	
+	function delete_selected(){
+		
+		var total = $('input.checkbox_del:checked').length;
+			
+		if(total <= 0){
+			jAlert('Por favor elige al menos un elemento.', 'Mensaje');
+		}else{
+			
+			jConfirm('&iquest;Est&aacute; seguro de que desea eliminar <b>'+total+'</b> registro(s) seleccionado(s)?\n<b>Advertencia:</b> Tenga Cuidado!', 'Confirmar', function(r){
+				if(r){
+					$('#adminForm').attr('action', '{{ url("admin/editorial/delete") }}'); 
+					$('#adminForm').submit();
+				}            
+			});
+		}
+
+
+		/////
+		/*
+		var total = $('input.checkbox_del:checked').length;
+			
+		if(total <= 0){
+			alert('Por favor elige al menos un elemento.', 'Mensaje');
+		}else{
+			
+			if( confirm('Advertencia:\nEstá seguro de que desea eliminar '+total+' registro(s) seleccionado(s)?\n\nTenga Extremo Cuidado!!') ){
+				//if(r)
+				{
+					$.ajax({
+						type:		'post',
+						cache:		false,
+						dataType:	"json",
+						url:		"{{ url('admin/ajax-miembros-delete') }}",
+						data:		$('#adminForm').serialize(),
+						beforeSend: function(){
+							lighbox();
+						},
+						
+						error: function(){
+							close_lighbox();
+							alert('Tuvimos un inconveniente, por favor intenta nuevamente');
+						},
+						
+						success: function(data){
+							close_lighbox();
+							
+							//Sesion agotada
+							if( !checkSess(data, "{{Request::url()}}") ) return false;
+							
+							var page = window.location.hash.replace('#', '');
+							
+							if (page == Number.NaN || page <= 0) {
+								page = 1;
+							}
+							
+							getItems(page);
+							
+							msg='';
+							msg = processStrJson(data.msg);
+							
+							//if( data.success == true )
+							{
+								
+								$('#ajax_msg_list').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+									//spinner.stop();
+									// Animation complete.
+									$(this).html(function(){
+										$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+										return msg;
+									}).promise().done(function(){
+										desvanecer();
+									});
+								});	
+								
+							}
+							
+						},
+						
+					});
+				}            
+			};
+		}*/
+			
+	}
 	</script>
     
     <script type="text/javascript">

@@ -37,6 +37,7 @@ Route::group(array('prefix'=>'admin'), function(){
 
 	//Controlador Default dejarlo hasta el final
 	Route::controller('proyectos', 'admin_ProyectosController');
+	Route::controller('editorial', 'admin_EditorialController');
 	Route::controller('/', 'admin_ProyectosController');
 		
 });

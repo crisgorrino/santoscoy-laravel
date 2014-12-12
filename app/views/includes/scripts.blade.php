@@ -19,6 +19,232 @@
 		{
 			$('#slider1').tinycarousel();
 		});*/
+		
+	$(document).ready(function(e) {
+        $('body').on('hover', '.hover-editorial', function(){
+			
+			$('.hover-editorial').children('span').removeClass('hide-num');
+			$('.hover-editorial').children('img').remove();
+			
+			//Obtener json
+			var datos 	= $(this).data('editorial');
+			var pos		= $(this).data('pos');
+			$('#pos_editorial').html(pos);
+			
+			/*{"id":4,"archivo":"edicion_2.jpg","no_publicacion":1,"titulo":"Design: El dise\u00f1o como estilo de vida","descripcion":"descripcion corta","url":null,"published":1,"removed":0,"created_at":"2014-12-11 11:11:20","updated_at":"2014-12-11 11:11:20","path":"uploads\/editorial\/id_4\/"}*/
+			
+			$(this).children('span').addClass('hide-num');
+			$(this).append('<img src="'+datos.path+'thumb_'+datos.archivo+'" alt="">');
+		});
+		
+		$('body').on('click', '.ver_detalle', function(e){
+			e.preventDefault();
+			var mi = $(this);
+			$.ajax({
+				type:		'post',
+				cache:		false,
+				dataType:	"json",
+				url:		"{{ url('ajax-proyecto-detalles') }}",
+				data:		'p_id='+mi.data('p_id'),
+				beforeSend: function(){
+					
+				},
+				
+				error: function(){
+					//close_lighbox();
+					alert('Tuvimos un inconveniente, por favor intenta nuevamente');
+				},
+				
+				success: function(data){
+					
+					if( data.success == true )
+					{
+						$('.conceptos .ver_detalle').removeClass('active');
+						mi.addClass('active');
+						
+						$('#no_proyecto').html(mi.data('pos'));
+												
+						$('#img_proy').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+							
+							//spinner.stop();
+							// Animation complete.
+							$(this).html(function(){
+								$(this).show();
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								
+								
+								return '<img src="'+data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
+							}).promise().done(function(){								
+								//
+							});
+						});
+						
+						$('.titulo-main h3').html(data.proyecto.titulo.toUpperCase());
+						
+						//Ficha
+						$('#arquitectura').html(data.proyecto.arquitectura.toUpperCase());
+						$('#locacion').html(data.proyecto.locacion.toUpperCase());
+						$('#tipologia').html(data.proyecto.tipologia.toUpperCase());
+						$('#cliente').html(data.proyecto.cliente.toUpperCase());
+						$('#status').html(data.proyecto.status.toUpperCase());
+						$('#asociado').html(data.proyecto.asociado.toUpperCase());
+						$('#dimension').html(data.proyecto.dimension.toUpperCase());
+						$('#descripcion').html(data.proyecto.descripcion);
+						
+						var salida = '';
+						
+						if( data.proyecto.imagenes.length > 1 )
+						{
+							var i=0;
+							$.each(data.proyecto.imagenes, function(index, value){
+								if( i==0 ){ i++; return; }
+								salida += '<div class="img-cont">';
+								salida += '<img src="{{ url("") }}/'+value['path']+value['archivo']+'" alt="">';
+								if( value['descripcion']=='' || value['descripcion']==null ){
+								}
+								else{
+									salida+= '<p>'+value['descripcion']+'</p>';
+								}
+								salida+= '</div>'
+							});
+							
+							if( salida!='' ){
+								$('.detalle-imgs').html(salida);
+							}
+						}
+						
+					}
+					
+					
+				},
+				
+			});
+			
+		});
+		
+		$('body').on('click', '.filtro_cat', function(e){
+			e.preventDefault();
+			
+			var mi = $(this);
+			
+			$.ajax({
+				type:		'post',
+				cache:		false,
+				dataType:	"json",
+				url:		"{{ url('ajax-filtro-categoria') }}",
+				data:		'id='+mi.data('id'),
+				beforeSend: function(){
+					
+				},
+				
+				error: function(){
+					//close_lighbox();
+					alert('Tuvimos un inconveniente, por favor intenta nuevamente');
+				},
+				
+				success: function(data){
+					
+					if( data.success == true ){
+						
+						if( data.active == true ){
+							mi.addClass('active');
+						}
+						else{
+							mi.removeClass('active');
+						}
+						
+						$('#no_proyecto').html('');
+						
+						$('.conceptos-inner').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+							
+							//spinner.stop();
+							// Animation complete.
+							$(this).html(function(){
+								$(this).show();
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								
+								
+								return data.resp.view;
+							}).promise().done(function(){								
+								//
+							});
+						});
+						
+						$('#total_proyectos').html(data.resp.total_proyectos);
+						
+					}
+					
+				},
+				
+			});
+			
+		});
+    });
+	
+	//Obtener imagen aleatoria
+	function changeBG(){
+		$.ajax({
+				type:		'post',
+				cache:		false,
+				dataType:	"json",
+				url:		"{{ url('ajax-random-img') }}",
+				//data:		'p_id='+mi.data('p_id'),
+				beforeSend: function(){
+					
+				},
+				
+				error: function(){
+					//close_lighbox();
+					alert('Tuvimos un inconveniente, por favor intenta nuevamente');
+				},
+				
+				success: function(data){
+					
+					if( data.success == true )
+					{
+						$('.conceptos .ver_detalle').removeClass('active');
+						mi.addClass('active');
+						
+						$('#img_proy').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+							
+							//spinner.stop();
+							// Animation complete.
+							$(this).html(function(){
+								$(this).show();
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								
+								
+								return '<img src="'+data.proyecto.imagen.path+data.proyecto.imagen.archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
+							}).promise().done(function(){								
+								//
+							});
+						});
+						
+						$('.titulo-main h3').html(data.proyecto.titulo.toUpperCase());
+						
+						//Ficha
+						$('#arquitectura').html(data.proyecto.arquitectura.toUpperCase());
+						$('#locacion').html(data.proyecto.locacion.toUpperCase());
+						$('#tipologia').html(data.proyecto.tipologia.toUpperCase());
+						$('#cliente').html(data.proyecto.cliente.toUpperCase());
+						$('#status').html(data.proyecto.status.toUpperCase());
+						$('#asociado').html(data.proyecto.asociado.toUpperCase());
+						$('#dimension').html(data.proyecto.dimension.toUpperCase());
+						$('#descripcion').html(data.proyecto.descripcion);
+						
+					}
+					
+					
+				},
+				
+			});
+	}
 	</script>
+    
+    <!-- include Cycle2 -->
+	<script src="{{ asset('js/jquery.cycle2.min.js') }}"></script>
+    <script type="text/javascript">
+	$('.cycle-slideshow').cycle({ random: true, timeout:5000 });
+    </script>
     
 @show

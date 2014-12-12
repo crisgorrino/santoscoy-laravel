@@ -6,6 +6,7 @@
         $('.jcarousel')
             .jcarousel({
                 // Options go here
+				center: true
             });
 
         /*
@@ -51,5 +52,28 @@
             .jcarouselPagination({
                 // Options go here
             });
+			
+			
+		/* AJAX Elements */
+		/*var setup = function(data) {
+            var html = '<ul>';
+
+            $.each(data.items, function() {
+                html += '<li class="hover-editorial" data-pos="{{ $pos }}" data-editorial='{{ json_encode($value) }}'><span class="">{{ $value->no_publicacion }}</span></li>';
+            });
+
+            html += '</ul>';
+
+            // Append items
+            jcarousel
+                .html(html);
+
+            // Reload carousel
+            jcarousel
+                .jcarousel('reload');
+        };
+
+        $.getJSON('data.json', setup);*/
+		
     });
 })(jQuery);

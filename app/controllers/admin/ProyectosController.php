@@ -135,7 +135,7 @@ class admin_ProyectosController extends BaseController {
 		
 	}
 	
-	//Guardar Producto
+	//Guardar Proyecto
 	public function postEdit()
 	{
 		$this->beforeFilter('csrf', array('on' => 'post'));
@@ -177,6 +177,7 @@ class admin_ProyectosController extends BaseController {
 		}
 		
 		$proyecto->titulo 				= Winput::get('titulo');
+		$proyecto->arquitectura			= Winput::get('arquitectura');
 		$proyecto->descripcion 			= Winput::get('descripcion');
 		$proyecto->locacion				= Winput::get('locacion');
 		$proyecto->tipologia			= Winput::get('tipologia');
@@ -323,47 +324,12 @@ class admin_ProyectosController extends BaseController {
 	{
 		$proyecto = Proyectos::with('imagenes')->where('id', '=', $p_id)->first();
 		
-		$salida='';
-		if( count($proyecto->imagenes) > 0 ){
-			
-			ob_start();
-			
-			foreach( $proyecto->imagenes as $img ){
-				if( is_file($img->path.$img->archivo) ){ 
-					?>
-                    <div class="img-cont col-md-4" id="img_<?php echo $img->id; ?>" style="display:none;">
-                        <!-- Default box -->
-                        <div class="box">
-                            <div class="box-header">
-                                <?php /*?><h3 class="box-title">Default Box (button tooltip)</h3><?php */?>
-                                <div class="box-tools pull-right">
-                                    <?php /*?><a class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></a><?php */?>
-                                </div>
-                            </div>
-                            <div class="box-body">
-                            	<img src="<?php echo url($img->path.'thumb_'.$img->archivo); ?>" alt="<?php echo $proyecto->titulo; ?>" style="display:block; margin:1% auto; width:100%"><br />
-                                    <span><label>Orden:&nbsp;</label><input type="text" name="orden[<?php echo $img->id; ?>]" size="4" value="<?php echo $img->ordering; ?>" class="validate[required, custom[integer]]" data-prompt-position="topLeft"/></span>&nbsp;
-                                    <span id="loader_order_img<?php echo $img->id; ?>">
-                                        
-                                        <a class="btn btn-primary btn-sm save-img" onclick="orderingImg('<?php echo $img->id; ?>');"><i class="fa fa-save"></i>&nbsp;Guardar</a>
-                                    </span>
-                                    <span id="loader_del_s<?php echo $img->id; ?>">
-                                        <a class="btn btn-danger btn-sm" title="" onclick="delImg('<?php echo $img->id; ?>');">
-                                            <i class="fa fa-times"></i>
-                                        </a>
-                                    </span>
-                            </div><!-- /.box-body -->
-                            <div class="box-footer">&nbsp;</div><!-- /.box-footer-->
-                        </div><!-- /.box -->
-                    </div>
-                    <?php
-				}
-			}
-			
-			$salida = ob_get_clean();
-		}
-		
-		return $salida;
+		return View::make('admin.proyectos.proyectos_edit_imagenes_list', 
+				array(
+				    'proyecto'	=> $proyecto,
+					'style'		=> 'display:none',
+				) 
+			)->render();		
 		
 	}
 	
@@ -492,6 +458,8 @@ class admin_ProyectosController extends BaseController {
 								
 								} else {
 									
+									$imagen->delete();
+									
 									$msg.='<div class="alert alert-danger alert-dismissable">
 											<i class="fa fa-ban"></i>
 											<a type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
@@ -512,7 +480,9 @@ class admin_ProyectosController extends BaseController {
 								
 							} 
 							else{
-								dd(' simon');
+								
+								$imagen->delete();
+								
 								$msg.='<div class="alert alert-danger alert-dismissable">
 										<i class="fa fa-ban"></i>
 										<a type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
@@ -724,10 +694,11 @@ class admin_ProyectosController extends BaseController {
 	{
 		if( Request::ajax() ){
 			
-			if( Input::has('orden') and Input::has('p_id') ){
+			if( Input::has('orden') and Input::has('p_id') and Input::has('descripcion') ){
 				
 				$arrOrden = Input::get('orden');
 				$p_id	  = Input::get('p_id');
+				$arrDescripcion = Input::get('descripcion');
 				
 				foreach($arrOrden as $key => $value){
 					
@@ -735,6 +706,7 @@ class admin_ProyectosController extends BaseController {
 					
 					if($imagen){
 						$imagen->ordering = $value;
+						$imagen->descripcion = $arrDescripcion[$key];
 						$imagen->save();
 					}
 					
