@@ -427,8 +427,11 @@ html, body {
   list-style: none;
   position: absolute;
   padding: 0;
-  margin: 0;
-  /*width:100%;*/
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width:100%;
   left: 0;
   top: 0;
   display: block; }
@@ -443,7 +446,13 @@ html, body {
   font-size: 5em;
   display: block;
   color: gray;
-  cursor: pointer; }
+  cursor: pointer; 
+  transition: all .25s ease;
+}
+
+#slider1 .overview li img{
+  transition: all .25s ease;
+}
 
 header {
   width: 100%;
@@ -507,7 +516,7 @@ footer {
     text-decoration: none;
     display: inline-block;
     color: #bdbec1;
-    width: 320px;
+    width: 206px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     opacity: 1;
@@ -911,7 +920,13 @@ footer {
   margin: 0 auto; }
 
 .editorial-cont {
-  padding: 1% 0; }
+  padding: 1% 0; 
+  }
+  .editorial-cont .modal-detalle {
+    position: absolute;
+    width: 100%;
+
+  }
   .editorial-cont .top {
     padding: 1% 0;
     border-top: 1px solid #707070;

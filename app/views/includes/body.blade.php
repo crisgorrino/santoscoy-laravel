@@ -16,11 +16,11 @@
 		  	<span>SUSTENTABILIDAD</span>
 		  </a>
           <a href="" class="filtro_cat @if(Sess::has('categorias.4')) active @endif" data-id="4">
-		  	<img src="{{ asset('images/filtros/filtro-s.png') }}" alt="">
+		  	<img src="{{ asset('images/filtros/filtro-o.png') }}" alt="">
 		  	<span>OAP</span>
 		  </a>
           <a href="" class="filtro_cat @if(Sess::has('categorias.5')) active @endif" data-id="5">
-		  	<img src="{{ asset('images/filtros/filtro-s.png') }}" alt="">
+		  	<img src="{{ asset('images/filtros/filtro-p.png') }}" alt="">
 		  	<span>PAISAJISMO</span>
 		  </a>
 		  

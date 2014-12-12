@@ -3,6 +3,9 @@
 	
   @section('editorial')  
   	<div class="editorial-cont cf">
+  		<div class="modal-detalle">
+      
+	    </div>
  	 	<div class="top cf"> 
  	 		<div class="inner"> 	 		
 	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
