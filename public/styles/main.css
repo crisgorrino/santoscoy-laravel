@@ -970,7 +970,33 @@ footer {
     width: 2000em;
   }
   .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial{
+    position: relative;
     width: 441px;
+  }
+  .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .detalle{
+    background: #322f31;
+    position: absolute;
+    padding: 10px;
+    width: 250px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    opacity: 0;
+    color: #bdbec1;
+    transition: all .25s ease;
+  }
+  .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .active.detalle{
+    opacity: 1;
+  }
+  .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .detalle span{
+    border-bottom: 1px solid #00bff3;
+    border-top: 1px solid #00bff3;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
   }
   .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial img{
     width: 100%;

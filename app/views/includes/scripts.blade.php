@@ -31,6 +31,12 @@
 				activeEditorial=false;
 			}
 			$('.modal-detalle').toggleClass('active');
+		});
+
+		//Vista detalle
+		$('.detalle-editorial img').click(function(e){
+			e.preventDefault();
+			$('.detalle-editorial .detalle').toggleClass('active');
 		})
 
 	    });

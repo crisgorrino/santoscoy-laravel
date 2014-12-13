@@ -9,10 +9,10 @@
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
 
 					</ul>
 				</div>
@@ -152,7 +152,7 @@
                  <ul>
                      <li><a href="">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
                      <li><a href="">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-                     <li><a href="">CONTACTANOS <img src="{{ asset('images/contacto/email.png') }}"></a></li>
+                     <li><a href="">SIGUENOS <img src="{{ asset('images/contacto/siguenos.png') }}"></a></li>
                  </ul>
             </div>	 
          </nav> 
