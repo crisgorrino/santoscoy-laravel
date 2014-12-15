@@ -26,6 +26,23 @@
 			$('.modal-detalle').css({ opacity: 0, visibility: "visible"}).animate({opacity: 1}, 600, function() {});
 		}
 	}
+
+	var activeVProject = false;
+	function vistaProject(){
+		if (activeVProject){
+			var rutaImg='{{asset("images/vista.png")}}';
+			$('.vista-project').html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			activeVProject=false;
+			//$('.complete').removeClass('active').animate({opacity: 1}, 600, function() {});
+			$('.complete').stop(true,true).removeClass('active', 10000);
+		}else{
+			var rutaImg='{{asset("images/close-gray.png")}}';
+			$('.vista-project').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			activeVProject = true;			
+			//$('.complete').addClass('active').animate({opacity: 1}, 600, function() {});
+			$('.complete').stop(true,true).addClass('active',10000);
+		}
+	}
 	</script>
 	<script type="text/javascript">
 	    $(document).ready( function() {
@@ -42,6 +59,13 @@
 		$('.detalle-editorial img').click(function(e){
 			e.preventDefault();
 			$('.detalle-editorial .detalle').toggleClass('active');
+		});
+
+		//Vista detalle
+		$('.vista-project').click(function(e){
+			e.preventDefault();
+			vistaProject();
+			//$('.complete').toggleClass('active');
 		})
 
 	    });
@@ -105,7 +129,7 @@
 								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
 								
 								
-								return '<img src="'+data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
+								return '<img class="complete" src="'+data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
 							}).promise().done(function(){								
 								//
 							});

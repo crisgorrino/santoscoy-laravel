@@ -456,7 +456,15 @@ html, body {
 
 header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9); }
+  background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+
+  header.active {
+  background-color: rgba(0, 0, 0, 0.6); }
+
   header nav ul {
     list-style-type: none;
     margin: 0;
@@ -506,10 +514,13 @@ footer {
 
 .filtros {
   text-align: center;
-  padding: 5% 0 0 0;
+  padding: 8% 0 0 0;
   position: relative;
   z-index: 3;
   background-color: rgba(0, 0, 0, 0.6); }
+.filtros.active{
+  display: none;
+}
   .filtros a {
     letter-spacing: 2px;
     font-size: .8em;
@@ -562,6 +573,9 @@ footer {
   z-index: 3;
   border-bottom: 1px solid #707070;
   background-color: rgba(0, 0, 0, 0.6); }
+  .main-gal.active {
+    top: 0;
+  }
   .main-gal span {
     display: block;
     text-align: center;
@@ -569,14 +583,22 @@ footer {
     font-size: .7em;
     border-bottom: 1px solid #707070;
     padding: 2% 0; }
+  .main-gal span.active {
+    display: none;
+  }
   .main-gal img {
     display: block;
     width: 980px;
     margin: 0 auto; }
+  .main-gal img.active{
+    width: 100%;
+  }
   .main-gal .titulo-main {
     border-top: 1px solid #707070;
     text-align: center;
     padding: 2% 0; }
+  .main-gal .titulo-main.active {
+    display: none;}
     .main-gal .titulo-main h3 {
       color: #bdbec1;
       display: inline-block;
@@ -584,7 +606,64 @@ footer {
       font-weight: normal;
       letter-spacing: 5px;
       padding: 0 0 5px 0; }
-
+  .proyecto-detalle{
+    background: #322f31;
+    position: absolute;
+    padding: 10px;
+    width: 270px;
+    top: 75%;
+    left: 15%;
+    right: 0;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 12px;
+    opacity: 0;
+    color: #bdbec1;
+    transition: all .25s ease;
+    z-index: 5;
+  }
+  .proyecto-detalle.active{
+    opacity: 1;
+  }
+  .proyecto-detalle .controles{
+     text-align: center;
+  }
+  .proyecto-detalle .controles a, .proyecto-detalle .controles small, .proyecto-detalle .controles img{
+     vertical-align: middle;
+  }
+  .proyecto-detalle .controles small{
+     cursor: pointer;
+  }
+  .proyecto-detalle .controles .prev .prev-img{
+     margin-right: 0;
+     transition: all .25s ease;
+  }
+  .proyecto-detalle .controles .prev:hover .prev-img{
+     margin-right: 10px;
+  }
+  .proyecto-detalle .controles .next .next-img{
+     margin-left: 0;
+     transition: all .25s ease;
+  }
+  .proyecto-detalle .controles .next:hover .next-img{
+     margin-left: 10px;
+  }
+  .proyecto-detalle .titulo{
+    border-bottom: 1px solid #00bff3;
+    border-top: 1px solid #00bff3;
+    display: block;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+.proyecto-detalle .ver-mas{
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #00aeef;
+}
+.proyecto-detalle .current{
+  color: #00aeef;
+}
 .detalle-proyecto {
   background-color: #1d1c1c;
   padding: 0; }
@@ -642,6 +721,10 @@ footer {
     vertical-align: top;
     max-width: 45%;
     margin: 2%; }
+    .detalle-imgs .img-cont.active {
+      max-width: 100%;
+      width: 100%;
+    }
     .detalle-imgs .img-cont img {
       display: block;
       width: 100%; }

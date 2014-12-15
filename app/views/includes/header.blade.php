@@ -1,6 +1,6 @@
 @section('header')
  <!--header-->
-  	<header>
+  	<header class="complete">
 	  	<nav>
 		  	<ul>
 			  	<li><a href="" class="proyectos">PROYECTOS</a></li>
@@ -12,7 +12,7 @@
 		  	<div class="logo-cont cf">
 		  		<div class="inner">
 			  		<a href="{{ url() }}"><img src="{{ asset('images/header/logo.png') }}" alt=""></a>
-			  		<span class="vista right">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
+			  		<span class="vista vista-project right">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
 		  		</div>	
 		  	</div>
 	  	</nav>	  	
