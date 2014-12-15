@@ -34,7 +34,7 @@
 	  
 	  <!--main gallery-->
 	   <div class="main-gal complete">
-	   		<span class="complete"><a id="no_proyecto">1</a> / <a id="total_proyectos">{{ $total_proyectos }}</a></span>	
+	   		<span class="complete"><a class="no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a></span>	
             <?php 
 			$primer_proyecto = $proyectos->first();
 			$imagenes = $primer_proyecto->imagenes;
@@ -43,7 +43,7 @@
 		  <img class="complete" src="{{ asset($primer_imagen->path.$primer_imagen->archivo) }}" alt="{{ strtoupper($primer_proyecto->titulo) }}">
 		  </div>
 		  <div class="titulo-main complete">
-		  	<h3>{{ strtoupper($primer_proyecto->titulo) }}</h3>
+		  	<h3 class="data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</h3>
 		  </div>
 		  
 	   </div>
@@ -51,9 +51,9 @@
 
 	  <!--Detalle proyecto-->
 	  <div class="proyecto-detalle complete">
-	  	<div class="controles"><small class="prev">ANTERIOR <img class="prev-img" src="{{asset ('images/prev.png')}}"></small><a class="current" id="no_proyecto">1</a> / <a id="total_proyectos">{{ $total_proyectos }}</a><small class="next"><img class="next-img" src="{{asset ('images/next.png')}}"> SIGUIENTE</small></div>
-	  	<span class="titulo">LOBBY<br>ARQUITECTURA INTERIORISMO 2014</span>
-	  	<small>LOCACIÓN: MÉXICO DF - TIPOLOGIA: HABITACIONAL - CLIENTE: FULLCONCEPT</small>
+	  	<div class="controles"><small class="prev data-prev" data-p_id="{{ $primer_proyecto->id }}" data-ver=">">ANTERIOR <img class="prev-img" src="{{asset ('images/prev.png')}}"></small><a class="current no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a><small class="next data-next" data-p_id="{{ $primer_proyecto->id }}" data-ver="<"><img class="next-img" src="{{asset ('images/next.png')}}"> SIGUIENTE</small></div>
+	  	<span class="titulo data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</span><a class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</a>
+	  	<small>LOCACIÓN: <span class="data-locacion">{{ strtoupper($primer_proyecto->locacion) }}</span> - TIPOLOGIA: <span class="data-tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span> - CLIENTE: <span class="data-cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></small>
 	  	<a class="ver-mas" href="#">VER MÁS</a>
 	  </div>
 	  <!--Detalle proyecto-->
@@ -76,13 +76,13 @@
 		<!-- DETALLES SIDE BOX -->
 		  <div class="side-box">
 			  <ul class="proy-tags">
-				 <li><a href="">ARQUITECTURA<br> <span id="arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</span></a></li>
-				 <li><a href="">LOCACION<br> <span id="locacion">{{ strtoupper($primer_proyecto->locacion) }}</span></a></li>
-				 <li><a href="">TIPOLOGÍA<br> <span id="tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span></a></li>
-				 <li><a href="">CLIENTE<br> <span id="cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></a></li>
-				 <li><a href="">STATUS<br> <span id="status">{{ strtoupper($primer_proyecto->status) }}</span></a></li>
-				 <li><a href="">ASOCIADO<br> <span id="asociado">{{ strtoupper($primer_proyecto->asociado) }}</span></a></li>
-				 <li><a href="">DIMENSIÓN<br> <span id="dimension">{{ strtoupper($primer_proyecto->dimension) }}</span></a></li>
+				 <li><a href="">ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</span></a></li>
+				 <li><a href="">LOCACION<br> <span class="data-locacion">{{ strtoupper($primer_proyecto->locacion) }}</span></a></li>
+				 <li><a href="">TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span></a></li>
+				 <li><a href="">CLIENTE<br> <span class="data-cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></a></li>
+				 <li><a href="">STATUS<br> <span class="data-status">{{ strtoupper($primer_proyecto->status) }}</span></a></li>
+				 <li><a href="">ASOCIADO<br> <span class="data-asociado">{{ strtoupper($primer_proyecto->asociado) }}</span></a></li>
+				 <li><a href="">DIMENSIÓN<br> <span class="data-dimension">{{ strtoupper($primer_proyecto->dimension) }}</span></a></li>
 			  </ul>
 			  
 			  <span class="vista vista-project">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
@@ -90,7 +90,7 @@
 		  </div>
 		 <!-- DETALLES SIDE BOX -->
 		 <!-- DESCRIPCION CENTER BOX -->
-		  <div class="center-box justify" id="descripcion">
+		  <div class="center-box justify" class="data-descripcion">
 			  <p>{{ $primer_proyecto->descripcion }}</p>
 		  </div>
 		  <!-- DESCRIPCION CENTER BOX -->

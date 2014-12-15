@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label>Descripcion Corta</label>
-                    <textarea class="form-control validate[required]" data-prompt-position="topLeft" id="descripcion" name="descripcion" rows="8" style="width:100%;">{{ Input::old('descripcion')?Input::old('descripcion'):(isset($proyecto->descripcion)?$proyecto->descripcion:'') }}</textarea>
+                    <textarea class="form-control validate[required, maxSize[8000]]" data-prompt-position="topLeft" id="descripcion" name="descripcion" rows="8" style="width:100%;">{{ Input::old('descripcion')?Input::old('descripcion'):(isset($proyecto->descripcion)?$proyecto->descripcion:'') }}</textarea>
                 </div>
                 <?php /*?><div class="form-group">
                     <label>Descripcion Larga</label>

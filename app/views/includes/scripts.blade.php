@@ -34,18 +34,18 @@
 			$('.vista-project').html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
 			activeVProject=false;
 			//$('.complete').removeClass('active').animate({opacity: 1}, 600, function() {});
-			$('.complete').stop(true,true).removeClass('active', 10000);
+			$('.complete').removeClass('active', 10000);
 		}else{
 			var rutaImg='{{asset("images/close-gray.png")}}';
 			$('.vista-project').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
 			activeVProject = true;			
 			//$('.complete').addClass('active').animate({opacity: 1}, 600, function() {});
-			$('.complete').stop(true,true).addClass('active',10000);
+			$('.complete').addClass('active',10000);
 		}
 	}
 	</script>
 	<script type="text/javascript">
-	    $(document).ready( function() {
+	$(document).ready( function() {
 	    $('#tab-container').easytabs();
 
 	      //Vista button
@@ -62,13 +62,13 @@
 		});
 
 		//Vista detalle
-		$('.vista-project').click(function(e){
+		$('.vista-project, .ver-mas').click(function(e){
 			e.preventDefault();
 			vistaProject();
 			//$('.complete').toggleClass('active');
 		})
 
-	    });
+	});
     </script>
     <script type="text/javascript">
 		/*$(document).ready(function()
@@ -93,15 +93,21 @@
 			$(this).append('<img src="'+datos.path+'thumb_'+datos.archivo+'" alt="">');
 		});
 		
-		$('body').on('click', '.ver_detalle', function(e){
+		$('body').on('click', '.ver_detalle, .data-prev, .data-next', function(e){
 			e.preventDefault();
 			var mi = $(this);
+			var ver =mi.data('ver');
+			
+			if(typeof ver == 'undefined' ){
+				ver = '';
+			}
+			
 			$.ajax({
 				type:		'post',
 				cache:		false,
 				dataType:	"json",
 				url:		"{{ url('ajax-proyecto-detalles') }}",
-				data:		'p_id='+mi.data('p_id'),
+				data:		'p_id='+mi.data('p_id')+'&ver='+ver,
 				beforeSend: function(){
 				},
 				
@@ -116,9 +122,30 @@
 					{
 						
 						$('.conceptos .ver_detalle').removeClass('active');
-						mi.addClass('active');
+						//mi.addClass('active');
+						$(".ver_detalle[data-p_id='"+data.proyecto.id+"']").addClass('active');
 						
-						$('#no_proyecto').html(mi.data('pos'));
+						if( ver=='' ){
+							$('.no_proyecto').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+								// Animation complete.
+								$(this).html(function(){
+									$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+									return mi.data('pos');
+								});
+							});
+						}
+						else{
+							
+							var pos = $(".ver_detalle[data-p_id='"+data.proyecto.id+"']").data('pos');
+							
+							$('.no_proyecto').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+								// Animation complete.
+								$(this).html(function(){
+									$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+									return pos;
+								});
+							});
+						}
 												
 						$('#img_proy').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
 							
@@ -128,24 +155,61 @@
 								$(this).show();
 								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
 								
+								var cls = '';
+								if( activeVProject == true ){
+									cls = 'active';
+								}
 								
-								return '<img class="complete" src="'+data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
+								return '<img class="complete '+cls+'" src="'+data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo+'" alt="'+data.proyecto.titulo.toUpperCase()+'">';
 							}).promise().done(function(){								
 								//
 							});
 						});
 						
-						$('.titulo-main h3').html(data.proyecto.titulo.toUpperCase());
+						$('.data-titulo').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+							// Animation complete.
+							$(this).html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.titulo.toUpperCase();
+							});
+						});
 						
 						//Ficha
-						$('#arquitectura').html(data.proyecto.arquitectura.toUpperCase());
-						$('#locacion').html(data.proyecto.locacion.toUpperCase());
-						$('#tipologia').html(data.proyecto.tipologia.toUpperCase());
-						$('#cliente').html(data.proyecto.cliente.toUpperCase());
-						$('#status').html(data.proyecto.status.toUpperCase());
-						$('#asociado').html(data.proyecto.asociado.toUpperCase());
-						$('#dimension').html(data.proyecto.dimension.toUpperCase());
-						$('#descripcion').html(data.proyecto.descripcion);
+						$('.data-arquitectura, .data-locacion, .data-tipologia, .data-cliente, .data-status, .data-asociado, .data-dimension, .data-descripcion').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+							// Animation complete.
+							$('.data-arquitectura').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.arquitectura.toUpperCase();
+							});
+							$('.data-locacion').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.locacion.toUpperCase();
+							});
+							$('.data-tipologia').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.tipologia.toUpperCase();
+							});
+							$('.data-cliente').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.cliente.toUpperCase();
+							});
+							$('.data-status').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.status.toUpperCase();
+							});
+							$('.data-asociado').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.asociado.toUpperCase();
+							});
+							$('.data-dimension').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.dimension.toUpperCase();
+							});
+							$('.data-descripcion').html(function(){
+								$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+								return data.proyecto.descripcion.toUpperCase();
+							});
+						});
 						
 						var salida = '';
 						
@@ -154,7 +218,13 @@
 							var i=0;
 							$.each(data.proyecto.imagenes, function(index, value){
 								if( i==0 ){ i++; return; }
-								salida += '<div class="img-cont">';
+								
+								var cls = '';
+								if( activeVProject == true ){
+									cls = 'active';
+								}
+								
+								salida += '<div class="img-cont complete '+cls+'">';
 								salida += '<img src="{{ url("") }}/'+value['path']+value['archivo']+'" alt="">';
 								if( value['descripcion']=='' || value['descripcion']==null ){
 								}
@@ -165,9 +235,20 @@
 							});
 							
 							if( salida!='' ){
-								$('.detalle-imgs').html(salida);
+								
+								$('.detalle-imgs').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+									// Animation complete.
+									$(this).html(function(){
+										$(this).css({opacity: 0, visibility: "visible"}).animate({opacity: 1},400);
+										return salida;
+									});
+								});
 							}
 						}
+						
+						
+						$('.data-prev').data('p_id', data.proyecto.id);
+						$('.data-next').data('p_id', data.proyecto.id);
 						
 						$('.section-pages-cont').children('div').slideUp('slow');
 					}
@@ -210,7 +291,7 @@
 							mi.removeClass('active');
 						}
 						
-						$('#no_proyecto').html('');
+						$('.no_proyecto').html('');
 						
 						$('.conceptos-inner').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
 							
@@ -227,7 +308,7 @@
 							});
 						});
 						
-						$('#total_proyectos').html(data.resp.total_proyectos);
+						$('.total_proyectos').html(data.resp.total_proyectos);
 						
 					}
 					

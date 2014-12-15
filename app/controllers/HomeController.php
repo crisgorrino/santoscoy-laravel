@@ -91,7 +91,7 @@ class HomeController extends BaseController {
 		$path="'".$this->pathUpload."editorial/id_',id,'/'";
 		$editorial = Editorial::publishedNotRemoved()
 							  ->select('*', DB::raw("CONCAT(".$path.") AS path") )
-							  ->orderBy('no_publicacion', 'ASC')
+							  ->orderBy('no_publicacion', 'DESC')
 							  //->paginate( $limit )
 							  //->useCurrentRoute()
 							  //->canShowFirstPage()
@@ -131,12 +131,28 @@ class HomeController extends BaseController {
 	*/
 	public function postAjax_proyecto_detalles()
 	{
-		if( Request::ajax() and Input::has('p_id') ){
-			$id = Input::get('p_id', 0);
+		if( Request::ajax() ){
 			
-			$proyecto = Proyectos::with('imagenes')
-							  ->where('id', '=', $id)
-							  ->first();
+			$id = Input::get('p_id', 0);
+			$ver = Input::get('ver', '');//puede ser mayor o menor que ">" o "<"
+			
+			$proyecto = Proyectos::with('imagenes');
+			
+			if( empty($ver) ){
+				$proyecto->where('id', '=', $id);
+			}
+			else{
+				$order = 'desc';
+				if( $ver == '>' ){
+					$order = 'asc';
+				}
+				else{
+					$order = 'desc';
+				}
+				$proyecto->where('id', $ver, $id)->orderBy('id', $order);
+			}
+			
+			$proyecto = $proyecto->first();
 			
 			if( $proyecto ){
 				return Response::json(
@@ -146,6 +162,12 @@ class HomeController extends BaseController {
 					)
 				);
 			}
+			
+			return Response::json(
+					array(
+						'success'	=> false,
+					)
+				);
 							  
 		}
 	}
@@ -290,6 +312,7 @@ class HomeController extends BaseController {
 										}
 									
 								  })
+								  ->orderBy('id', 'DESC')
 								  ->take($limit)
 								  ->get();
 								  
