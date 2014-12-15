@@ -21,6 +21,10 @@ $(document).ready(function(){
 	//proyectos toggle
 	$('.proyectos').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+
 		scrollTop();
 		$('.section-pages-cont').children('div').slideUp(time);
 		
@@ -31,6 +35,10 @@ $(document).ready(function(){
 	//contacto toggle
 	$('.contacto').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+
 		scrollTop();
 		$('.contact-cont').siblings().slideUp(time).promise().done(function(){
 			$('.contact-cont').slideToggle(time);
@@ -42,6 +50,10 @@ $(document).ready(function(){
 	//busqueda toggle
 	$('.busqueda').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+
 		scrollTop();
 		$('.busqueda-cont').siblings().slideUp(time).promise().done(function(){
 			$('.busqueda-cont').slideToggle(time);			
@@ -51,6 +63,10 @@ $(document).ready(function(){
 	//taller toggle
 	$('.taller').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+
 		scrollTop();
 		$('.taller-cont').siblings().slideUp(time).promise().done(function(){
 			$('.taller-cont').slideToggle(time);
@@ -61,6 +77,10 @@ $(document).ready(function(){
 	//taller toggle
 	$('.editorial').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+		
 		scrollTop();
 		$('.editorial-cont').siblings().slideUp(time).promise().done(function(){
 			$('.editorial-cont').slideToggle(time);			

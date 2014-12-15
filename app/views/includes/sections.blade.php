@@ -13,7 +13,6 @@
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
-
 					</ul>
 				</div>
 				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>

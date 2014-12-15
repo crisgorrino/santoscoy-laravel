@@ -11,26 +11,31 @@
     <script type="text/javascript" src="{{ asset('js/jquery.highlight.js') }}"></script>
     <?php /*?><script type="text/javascript" src="{{ asset('js/jquery.highlight-4.js') }}"></script><?php */?>
     <?php /*?><script type="text/javascript" src="{{ asset('js/jquery.highlight-4.closure.js') }}"></script><?php */?>
-	
 	<script type="text/javascript">
-		var activeEditorial = false;
+	var activeEditorial = false;
+	function modalEditorial(){
+		if (activeEditorial){
+			var rutaImg='{{asset("images/vista-black.png")}}';
+			$('.vista-gray').html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			activeEditorial=false;
+			$('.modal-detalle').css({opacity: 1, visibility: "hidden"}).animate({opacity: 0}, 600, function() {});
+		}else{
+			var rutaImg='{{asset("images/close.png")}}';
+			$('.vista-gray').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			activeEditorial = true;			
+			$('.modal-detalle').css({ opacity: 0, visibility: "visible"}).animate({opacity: 1}, 600, function() {});
+		}
+	}
+	</script>
+	<script type="text/javascript">
 	    $(document).ready( function() {
 	    $('#tab-container').easytabs();
 
 	      //Vista button
 		$('.vista-gray').click(function(e){
 			e.preventDefault();
-			if(activeEditorial == false){
-				var rutaImg='{{asset("images/close.png")}}';
-				$(this).html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
-				activeEditorial = true;
-			}
-			else if(activeEditorial == true){
-				var rutaImg='{{asset("images/vista-black.png")}}';
-				$(this).html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
-				activeEditorial=false;
-			}
-			$('.modal-detalle').toggleClass('active');
+			modalEditorial();
+			//$('.modal-detalle').toggleClass('active');
 		});
 
 		//Vista detalle
