@@ -85,6 +85,10 @@
 			//Obtener json
 			var datos 	= $(this).data('editorial');
 			var pos		= $(this).data('pos');
+			
+			$('.modal-detalle .jcarousel')
+            .jcarousel('scroll', pos-1);
+			
 			$('#pos_editorial').html(pos);
 			
 			/*{"id":4,"archivo":"edicion_2.jpg","no_publicacion":1,"titulo":"Design: El dise\u00f1o como estilo de vida","descripcion":"descripcion corta","url":null,"published":1,"removed":0,"created_at":"2014-12-11 11:11:20","updated_at":"2014-12-11 11:11:20","path":"uploads\/editorial\/id_4\/"}*/
@@ -352,6 +356,7 @@
 				//alert(data.view);
 				if( data.success == true )
 				{
+					
 					$('.busqueda-resultados').html(data.view).promise().done(function(){
 						var busqueda = $('#search').val();
 						var expr1 = /[^A-Za-zñÑáéíóúÁÉÍÓÚ0-9 ]/;

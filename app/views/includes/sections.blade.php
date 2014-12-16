@@ -9,10 +9,17 @@
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="x">www.view.com</a></div></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
+                    @if( $editorial )
+						<?php $pos = 1 ?>
+                        @foreach( $editorial as $value )
+                            <li class="detalle-editorial" data-pos="{{ $pos }}">
+                            	@if( is_file($value->path.$value->archivo) )
+	                            	<img src="{{asset ($value->path.$value->archivo)}}">
+                                @endif
+                                <div class="detalle"><span>VER PUBLICACIÓN</span>{{ $value->descripcion}} <a href="//{{ $value->url }}" target="_blank">{{ $value->url }}</a></div></li>
+                            <?php $pos++; ?>
+                        @endforeach
+                    @endif
 					</ul>
 				</div>
 				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>
@@ -28,7 +35,7 @@
   	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>
   	 	<!--SLIDER-->
   	 	<div class="slide-container">
-	  	 	<div id="slider1" class="jcarousel-wrapper">	
+	  	 	<div id="slider1" class="jcarousel-wrapper">
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
