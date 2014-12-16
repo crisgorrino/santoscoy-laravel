@@ -34,7 +34,7 @@
   	 	</div>
   	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>
   	 	<!--SLIDER-->
-  	 	<div class="slide-container">
+  	 	<div class="slide-container slide-principal">
 	  	 	<div id="slider1" class="jcarousel-wrapper">
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
