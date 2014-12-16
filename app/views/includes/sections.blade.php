@@ -156,9 +156,15 @@
          <nav>
             <div class="inner cf">
                  <ul>
-                     <li><a href="">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
-                     <li><a href="">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-                     <li><a href="">SIGUENOS <img src="{{ asset('images/contacto/siguenos.png') }}"></a></li>
+                     <li><a href="mailto:carlossantoscoy@santoscoyarquitectos.com?subject={{ rawurlencode('COMPARTIR CONTACTO SANTOSCOY') }}&body={{ rawurlencode('SANTOSCOY ARQUITECTOS
+                     
+                     T. +33.3627.5594 / 95
+                     carlossantoscoy@santoscoyarquitectos.com
+                     www.santoscoyarquitectos.com
+                     Av. paraisos 170\nciudad granja
+                     zap., jal., mx. cp 45010') }}">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
+                     <li><a href="mailto:carlossantoscoy@santoscoyarquitectos.com?subject={{ rawurlencode('CONTACTO CARLOS SANTOSCOY') }}">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
+                     <li><a href="#">SÍGUENOS <img src="{{ asset('images/contacto/siguenos.png') }}"></a></li>
                  </ul>
             </div>	 
          </nav> 

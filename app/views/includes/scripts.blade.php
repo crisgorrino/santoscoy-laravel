@@ -151,7 +151,7 @@
 							});
 						}
 												
-						$('#img_proy').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
+						/*$('#img_proy').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
 							
 							//spinner.stop();
 							// Animation complete.
@@ -168,6 +168,13 @@
 							}).promise().done(function(){								
 								//
 							});
+						});*/
+						
+						$('#img_proy img').fadeOut('slow',function() {
+							
+							//spinner.stop();
+							// Animation complete.
+							$(this).attr('src',data.proyecto.imagenes[0].path+data.proyecto.imagenes[0].archivo).attr('alt',data.proyecto.titulo.toUpperCase() ).fadeIn('slow');
 						});
 						
 						$('.data-titulo').css({opacity: 1.0, visibility: "visible"}).animate({opacity: 0}, 400, function() {
