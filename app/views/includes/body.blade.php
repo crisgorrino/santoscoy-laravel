@@ -52,7 +52,7 @@
 	  <!--Detalle proyecto-->
 	  <div class="proyecto-detalle complete">
 	  	<div class="controles"><small class="prev data-prev" data-p_id="{{ $primer_proyecto->id }}" data-ver=">">ANTERIOR <img class="prev-img" src="{{asset ('images/prev.png')}}"></small><a class="current no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a><small class="next data-next" data-p_id="{{ $primer_proyecto->id }}" data-ver="<"><img class="next-img" src="{{asset ('images/next.png')}}"> SIGUIENTE</small></div>
-	  	<span class="titulo data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</span><a class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</a>
+	  	<div class="cont-title"><span class="data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</span><a class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</a></div>
 	  	<small>LOCACIÓN: <span class="data-locacion">{{ strtoupper($primer_proyecto->locacion) }}</span> - TIPOLOGIA: <span class="data-tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span> - CLIENTE: <span class="data-cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></small>
 	  	<a class="ver-mas" href="#">VER MÁS</a>
 	  </div>

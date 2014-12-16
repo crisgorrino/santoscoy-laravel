@@ -9,7 +9,7 @@
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
-                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
+                        <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="x">www.view.com</a></div></li>
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>
                         <li class="detalle-editorial"><img src="{{asset ('images/editorial/edicion_2.jpg')}}"><div class="detalle"><span>VER PUBLICACIÓN</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. www.view.com</div></li>

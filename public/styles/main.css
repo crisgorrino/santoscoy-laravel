@@ -648,12 +648,15 @@ footer {
   .proyecto-detalle .controles .next:hover .next-img{
      margin-left: 10px;
   }
-  .proyecto-detalle .titulo{
+  .proyecto-detalle .cont-title{
     border-bottom: 1px solid #00bff3;
     border-top: 1px solid #00bff3;
     display: block;
     font-size: 15px;
     margin: 5px 0;
+  }
+  .proyecto-detalle .cont-title span, .proyecto-detalle .cont-title a{
+    display: block;
   }
 .proyecto-detalle .ver-mas{
   display: block;
@@ -1081,6 +1084,11 @@ footer {
     display: block;
     font-size: 15px;
     margin-bottom: 5px;
+  }
+  .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .detalle a{
+    text-decoration: none;
+    color: #00bff3;
+    display: block;
   }
   .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial img{
     width: 100%;
