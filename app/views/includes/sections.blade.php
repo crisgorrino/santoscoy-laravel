@@ -72,8 +72,8 @@
 	  			<h2>TALLER</h2> <img src="{{ asset('images/taller/sa.png') }}" alt="SA">
   	 		</div>
   	 	</div>
-  	 	
-  	 	<div id="tab-container" class="tab-container">
+  	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>  	 	
+  	 	<div id="tab-container" class="tab-container top" style="background: #C0C0C0;">
 	  	 	<div class="taller-imgs panel-container">
 	  	 		
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
@@ -135,7 +135,7 @@
 	  	 		
 	  	 	</div>
 	  	 	  	 	
-	  	 	<ul class='etabs'>
+	  	 	<ul class='etabs' style="background-color: #CCC;">
 		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
 		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li> -
 		  	 	<li class='tab'><a href="#iluminacion">ILUMINACIÓN</a></li> -
@@ -213,7 +213,7 @@
         
         <div class="inner cf">
             <p class="left"><label>BUSCAR</label> <input type="text" id="search" name="search" placeholder="LOBBY 33"></p> 
-            <!--<span class="close-busq right">CERRAR X</span>-->
+            <span class="close-busq right">CERRAR <img src="{{ asset('images/close.png') }}" alt="[]"></span>
         </div>
             
      </form>

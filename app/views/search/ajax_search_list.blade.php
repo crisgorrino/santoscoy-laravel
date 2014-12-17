@@ -18,7 +18,7 @@
                 <p>asociado: {{ $value->asociado }}</p>
                 <p>dimensión: {{ $value->dimension }}</p>  
             </div>
-            <a href="" class="ver_detalle" data-pos="" data-p_id="{{ $value->id }}">VER MAS</a>
+            <a href="" class="ver_detalle" data-pos="" data-p_id="{{ $value->id }}">VER MÁS</a>
         </div>
     <!--resultados -->
     @endforeach

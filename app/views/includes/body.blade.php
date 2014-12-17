@@ -67,7 +67,7 @@
 				}
 			}
 			?>
-          <div id="img_proy">
+          <div class="bg-img" id="img_proy">
 		  <img class="complete" src="{{ asset($pathFull) }}" alt="{{ strtoupper($pp_titulo) }}">
 		  </div>
 		  <div class="titulo-main complete">
