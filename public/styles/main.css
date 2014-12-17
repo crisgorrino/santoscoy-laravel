@@ -826,7 +826,7 @@ footer {
   padding: 1% 0; }
   .contact-cont h2 {
     font-weight: normal;
-    margin: 0;
+    margin: 40px 0 20px 0;
     padding: 0 0%;
     color: #3b383a;
     font-size: .9em;
@@ -873,6 +873,8 @@ footer {
         padding: 5px 0; }
         .contact-cont .contact-inner .contact-info p:nth-child(1) {
           letter-spacing: 3px; font-weight: bold;}
+        .contact-cont .contact-inner .contact-info p:nth-child(2) {
+          letter-spacing: 4px;}
         .contact-cont .contact-inner .contact-info p:nth-child(3) {
           font-size: .8em;}
         .contact-cont .contact-inner .contact-info p:nth-child(4) {
@@ -971,10 +973,10 @@ footer {
 .taller-cont {
   padding: 1% 0; }
   .taller-cont .top {
-    padding: 0;
+    padding: 10px 0;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
-    clear: both; }
+    clear: both;}
     .taller-cont .top h2 {
       font-weight: normal;
       margin: 0;
@@ -1158,7 +1160,7 @@ footer {
     vertical-align: bottom;
   }
   .editorial-cont .top {
-    paddign: 1% 0;
+    padding: 15px 0;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     clear: both; }
