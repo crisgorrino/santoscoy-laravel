@@ -480,7 +480,7 @@ header {
         font-size: .7em;
         display: block;
         color: #bdbec1;
-        letter-spacing: 1px; }
+        letter-spacing: 3px; }
         header nav ul li a:hover {
           color: #00aeef; }
   header .logo-cont {
@@ -490,7 +490,10 @@ header {
     header .logo-cont .inner {
       position: relative; }
     header .logo-cont a {
-      display: inline-block; }
+      display: inline-block; 
+      margin: 1% 0;}
+    header .logo-cont a img{
+      vertical-align: bottom; }
     header .logo-cont .vista {
       top: 50px;
       position: absolute;
