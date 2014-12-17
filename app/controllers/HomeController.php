@@ -24,7 +24,8 @@ class HomeController extends BaseController {
 		
 		$proyectos = Proyectos::select('proyectos.*')
 							  ->with('imagenes', 'categorias')
-							  ->orderBy('id', 'DESC');
+							  ->groupBy('proyectos.id')
+							  ->orderBy('proyectos.id', 'DESC');
 					
 		if( Sess::has('categorias') ){
 			
@@ -44,9 +45,9 @@ class HomeController extends BaseController {
 			
 			
 		}
-		else{
+		/*else{
 			$proyectos->with('categorias');
-		}
+		}*/
 							  
 		$proyectos = $proyectos->get();
 		

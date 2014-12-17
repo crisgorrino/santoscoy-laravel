@@ -31,13 +31,13 @@
 	function vistaProject(){
 		if (activeVProject){
 			var rutaImg='{{asset("images/vista.png")}}';
-			$('.vista-project').html('VISTA &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			$('.vista-project').html('VISTA<img src="'+rutaImg+'" alt="[]">');
 			activeVProject=false;
 			//$('.complete').removeClass('active').animate({opacity: 1}, 600, function() {});
 			$('.complete').removeClass('active', 10000);
 		}else{
 			var rutaImg='{{asset("images/close-gray.png")}}';
-			$('.vista-project').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			$('.vista-project').html('CERRAR<img src="'+rutaImg+'" alt="[]">');
 			activeVProject = true;			
 			//$('.complete').addClass('active').animate({opacity: 1}, 600, function() {});
 			$('.complete').addClass('active',10000);
@@ -48,7 +48,7 @@
 	$(document).ready( function() {
 	    $('#tab-container').easytabs();
 
-	      //Vista button
+	    //Vista button
 		$('.vista-gray').click(function(e){
 			e.preventDefault();
 			modalEditorial();
@@ -95,6 +95,10 @@
 			
 			$(this).children('span').addClass('hide-num');
 			$(this).append('<img src="'+datos.path+'thumb_'+datos.archivo+'" alt="">');
+		});
+		
+		$('body').on('click', '.hover-editorial', function(){
+			modalEditorial();
 		});
 		
 		$('body').on('click', '.ver_detalle, .data-prev, .data-next', function(e){
@@ -277,6 +281,7 @@
 			var mi = $(this);
 			
 			$.ajax({
+				async:		false,
 				type:		'post',
 				cache:		false,
 				dataType:	"json",

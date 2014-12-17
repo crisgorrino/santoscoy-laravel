@@ -34,16 +34,44 @@
 	  
 	  <!--main gallery-->
 	   <div class="main-gal complete">
-	   		<span class="complete"><a class="no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a></span>	
+	   		<span class="complete"><a class="no_proyecto">@if($proyectos->first())1 @else 0 @endif</a> / <a class="total_proyectos">{{ $total_proyectos }}</a></span>	
             <?php 
-			$primer_proyecto = $proyectos->first();
-			$imagenes = $primer_proyecto->imagenes;
-			$primer_imagen = $imagenes->first(); ?>
+			$pathFull		='';
+			$pp_id			='';
+			$pp_titulo		='';
+			$pp_arquitectura='';
+			$pp_locacion	='';
+			$pp_tipologia	='';
+			$pp_cliente		= '';
+			$pp_status 		= '';
+			$pp_asociado	= '';
+			$pp_dimension	= '';
+			$pp_descripcion	= '';
+			if( $proyectos->first() ){
+				$primer_proyecto 	= $proyectos->first();
+				$pp_id 				= $primer_proyecto->id;
+				$pp_titulo 			= $primer_proyecto->titulo;
+				$pp_arquitectura 	= $primer_proyecto->arquitectura;
+				$pp_locacion 		= $primer_proyecto->locacion;
+				$pp_tipologia 		= $primer_proyecto->tipologia;
+				$pp_cliente			= $primer_proyecto->cliente;
+				$pp_status			= $primer_proyecto->status;
+				$pp_asociado		= $primer_proyecto->asociado;
+				$pp_dimension		= $primer_proyecto->dimension;
+				$pp_descripcion		= $primer_proyecto->descripcion;
+				
+				if( $primer_proyecto->imagenes ){
+					$imagenes = $primer_proyecto->imagenes;
+					$primer_imagen = $imagenes->first(); 
+					$pathFull = $primer_imagen->path.$primer_imagen->archivo;
+				}
+			}
+			?>
           <div id="img_proy">
-		  <img class="complete" src="{{ asset($primer_imagen->path.$primer_imagen->archivo) }}" alt="{{ strtoupper($primer_proyecto->titulo) }}">
+		  <img class="complete" src="{{ asset($pathFull) }}" alt="{{ strtoupper($pp_titulo) }}">
 		  </div>
 		  <div class="titulo-main complete">
-		  	<h3 class="data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</h3>
+		  	<h3 class="data-titulo">{{ strtoupper($pp_titulo) }}</h3>
 		  </div>
 		  
 	   </div>
@@ -51,9 +79,9 @@
 
 	  <!--Detalle proyecto-->
 	  <div class="proyecto-detalle complete">
-	  	<div class="controles"><small class="prev data-prev" data-p_id="{{ $primer_proyecto->id }}" data-ver=">">ANTERIOR <img class="prev-img" src="{{asset ('images/prev.png')}}"></small><a class="current no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a><small class="next data-next" data-p_id="{{ $primer_proyecto->id }}" data-ver="<"><img class="next-img" src="{{asset ('images/next.png')}}"> SIGUIENTE</small></div>
-	  	<div class="cont-title"><span class="data-titulo">{{ strtoupper($primer_proyecto->titulo) }}</span><a class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</a></div>
-	  	<small>LOCACIÓN: <span class="data-locacion">{{ strtoupper($primer_proyecto->locacion) }}</span> - TIPOLOGIA: <span class="data-tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span> - CLIENTE: <span class="data-cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></small>
+	  	<div class="controles"><small class="prev data-prev" data-p_id="{{ $pp_id }}" data-ver=">">ANTERIOR <img class="prev-img" src="{{asset ('images/prev.png')}}"></small><a class="current no_proyecto">1</a> / <a class="total_proyectos">{{ $total_proyectos }}</a><small class="next data-next" data-p_id="{{ $pp_id }}" data-ver="<"><img class="next-img" src="{{asset ('images/next.png')}}"> SIGUIENTE</small></div>
+	  	<div class="cont-title"><span class="data-titulo">{{ strtoupper($pp_titulo) }}</span><a class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</a></div>
+	  	<small>LOCACIÓN: <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span> - TIPOLOGIA: <span class="data-tipologia">{{ strtoupper($pp_tipologia) }}</span> - CLIENTE: <span class="data-cliente">{{ strtoupper($pp_cliente) }}</span></small>
 	  	<a class="ver-mas" href="#">VER MÁS</a>
 	  </div>
 	  <!--Detalle proyecto-->
@@ -76,22 +104,22 @@
 		<!-- DETALLES SIDE BOX -->
 		  <div class="side-box">
 			  <ul class="proy-tags">
-				 <li><a href="">ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($primer_proyecto->arquitectura) }}</span></a></li>
-				 <li><a href="">LOCACION<br> <span class="data-locacion">{{ strtoupper($primer_proyecto->locacion) }}</span></a></li>
-				 <li><a href="">TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($primer_proyecto->tipologia) }}</span></a></li>
-				 <li><a href="">CLIENTE<br> <span class="data-cliente">{{ strtoupper($primer_proyecto->cliente) }}</span></a></li>
-				 <li><a href="">STATUS<br> <span class="data-status">{{ strtoupper($primer_proyecto->status) }}</span></a></li>
-				 <li><a href="">ASOCIADO<br> <span class="data-asociado">{{ strtoupper($primer_proyecto->asociado) }}</span></a></li>
-				 <li><a href="">DIMENSIÓN<br> <span class="data-dimension">{{ strtoupper($primer_proyecto->dimension) }}</span></a></li>
+				 <li><a href="">ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
+				 <li><a href="">LOCACION<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
+				 <li><a href="">TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($pp_tipologia) }}</span></a></li>
+				 <li><a href="">CLIENTE<br> <span class="data-cliente">{{ strtoupper($pp_cliente) }}</span></a></li>
+				 <li><a href="">STATUS<br> <span class="data-status">{{ strtoupper($pp_status) }}</span></a></li>
+				 <li><a href="">ASOCIADO<br> <span class="data-asociado">{{ strtoupper($pp_asociado) }}</span></a></li>
+				 <li><a href="">DIMENSIÓN<br> <span class="data-dimension">{{ strtoupper($pp_dimension) }}</span></a></li>
 			  </ul>
 			  
-			  <span class="vista vista-project">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
+			  <span class="vista vista-project">VISTA<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
 			  
 		  </div>
 		 <!-- DETALLES SIDE BOX -->
 		 <!-- DESCRIPCION CENTER BOX -->
 		  <div class="center-box justify" class="data-descripcion">
-			  <p>{{ $primer_proyecto->descripcion }}</p>
+			  <p>{{ $pp_descripcion }}</p>
 		  </div>
 		  <!-- DESCRIPCION CENTER BOX -->
 		  <!-- COMPARTIR SIDE BOX -->
