@@ -86,7 +86,7 @@
 	  </div>
 	  <!--Detalle proyecto-->
 
-	  <div class="main-img cycle-slideshow">
+	  <div class="main-img cycle-slideshow" data-cycle-auto-height="true">
       	@if( $imagenes )
         	@foreach($imagenes as $value)
             	@if( is_file($value->path.$value->archivo) )
@@ -138,9 +138,9 @@
 		  
 		   <!--DETALLE IMAGES-->
 		   <div class="detalle-imgs">
-                @if($imagenes->count() > 1)
+                @if($primer_proyecto->imagenes)
                 	<?php $i=0 ?>
-                	@foreach($imagenes as $value)
+                	@foreach($primer_proyecto->imagenes as $value)
                     	@if( $i==0 )
                         	<?php $i++; continue; ?>
                         @endif

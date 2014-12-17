@@ -104,9 +104,10 @@ class HomeController extends BaseController {
 		
 		$path ="'".$this->pathUpload."proyectos/id_',proyecto_id,'/img_id_', id,'/'";
 		$imagenes =ProyectoImagenes::select('id', 'archivo', DB::raw("CONCAT(".$path.") AS path") )
-									 ->get()
-									 //->random($this->count())
-									 ;
+								   //->where('id', '=', 30)
+								   ->get()
+								   //->random($this->count())
+								   ;
 									 
 		//$imagenes->random($imagenes->count());
 		

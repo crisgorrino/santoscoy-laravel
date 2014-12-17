@@ -459,7 +459,7 @@
     <!-- include Cycle2 -->
 	<script src="{{ asset('js/jquery.cycle2.min.js') }}"></script>
     <script type="text/javascript">
-	$('.cycle-slideshow').cycle({ random: true, timeout:5000 });
+	$('.cycle-slideshow').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: true, timeout:5000 });
     </script>
     
 @show
