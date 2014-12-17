@@ -72,7 +72,7 @@
 	  			<h2>TALLER</h2> <img src="{{ asset('images/taller/sa.png') }}" alt="SA">
   	 		</div>
   	 	</div>
-  	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>  	 	
+  	 	<span class="counter"><span id="pos_taller">1</span> / 4</span>  	 	
   	 	<div id="tab-container" class="tab-container top" style="background: #C0C0C0;">
 	  	 	<div class="taller-imgs panel-container">
 	  	 		
@@ -136,10 +136,10 @@
 	  	 	</div>
 	  	 	  	 	
 	  	 	<ul class='etabs' style="background-color: #CCC;">
-		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
-		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li> -
-		  	 	<li class='tab'><a href="#iluminacion">ILUMINACIÓN</a></li> -
-		  	 	<li class='tab'><a href="#verificacion">VERIFICACIÓN</a></li> <!---
+		  	 	<li class='tab'><a class="item-taller" data-pos="1" href="#preparacion">PREPARACÍON</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="2" href="#incubacion">INCUBACIÓN</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="3" href="#iluminacion">ILUMINACIÓN</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="4" href="#verificacion">VERIFICACIÓN</a></li> <!---
 		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
 		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li>-->
 	  	 	</ul>  	 	

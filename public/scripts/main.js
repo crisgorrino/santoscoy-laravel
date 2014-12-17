@@ -69,8 +69,7 @@ $(document).ready(function(){
 
 		scrollTop();
 		$('.taller-cont').siblings().slideUp(time).promise().done(function(){
-			$('.taller-cont').slideToggle(time);
-			
+			$('.taller-cont').slideToggle(time);			
 		});
 	});
 	
@@ -87,7 +86,9 @@ $(document).ready(function(){
 		});
 	});
 
-
+	$('.item-taller').click(function(){
+		$('#pos_taller').html($(this).data('pos'));
+	});
 
 	//taller toggle para imagenes
 	//preparacion

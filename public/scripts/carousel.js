@@ -180,7 +180,7 @@ $(document).ready(function(e) {
 		
 		elemento.children('span').addClass('hide-num');
 		elemento.append('<img src="'+datos.path+'thumb_'+datos.archivo+'" alt="">');
-		
+		$('#pos_editorial').html(current+1);
 	});
 	
 	$('body').on('click', '.modal-detalle .jcarousel-control-next', function(){
@@ -195,6 +195,6 @@ $(document).ready(function(e) {
 		
 		elemento.children('span').addClass('hide-num');
 		elemento.append('<img src="'+datos.path+'thumb_'+datos.archivo+'" alt="">');
-		
+		$('#pos_editorial').html(current+1);
 	});
 });
