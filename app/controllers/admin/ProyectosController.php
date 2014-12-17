@@ -392,8 +392,8 @@ class admin_ProyectosController extends BaseController {
 							//Extensiones permitidas
 							$upload->allowed = array('image/png','image/jpg', 'image/jpeg');
 							//Maximo de pixeles de la imagen, si es mayor no se carga
-							$upload->image_max_width 	= 1000;
-							$upload->image_max_height 	= 1000;
+							$upload->image_max_width 	= 2000;
+							$upload->image_max_height 	= 2000;
 							
 							$upload->image_min_width 	= 425;
 							$upload->image_min_height 	= 425;

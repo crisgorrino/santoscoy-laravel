@@ -61,8 +61,8 @@
 				$pp_descripcion		= $primer_proyecto->descripcion;
 				
 				if( $primer_proyecto->imagenes ){
-					$imagenes = $primer_proyecto->imagenes;
-					$primer_imagen = $imagenes->first(); 
+					$pp_imagenes = $primer_proyecto->imagenes;
+					$primer_imagen = $pp_imagenes->first(); 
 					$pathFull = $primer_imagen->path.$primer_imagen->archivo;
 				}
 			}
