@@ -540,7 +540,7 @@ footer {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     opacity: 1;
-    transition: all 0.25s ease; }
+    transition: all 0.20s ease; }
     .filtros a:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
