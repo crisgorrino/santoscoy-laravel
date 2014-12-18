@@ -118,8 +118,8 @@
 		  </div>
 		 <!-- DETALLES SIDE BOX -->
 		 <!-- DESCRIPCION CENTER BOX -->
-		  <div class="center-box justify" class="data-descripcion">
-			  <p>{{ $pp_descripcion }}</p>
+		  <div class="center-box justify">
+			  <p class="data-descripcion">{{ $pp_descripcion }}</p>
 		  </div>
 		  <!-- DESCRIPCION CENTER BOX -->
 		  <!-- COMPARTIR SIDE BOX -->
