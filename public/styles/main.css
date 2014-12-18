@@ -472,7 +472,7 @@ header {
     text-align: center; }
     header nav ul li {
       display: inline-block;
-      padding: 10px 25px; }
+      padding: 10px 30px; }
       header nav ul li a {
         text-decoration: none;
         color: #fff;
@@ -509,7 +509,7 @@ footer {
   footer .inner {
     width: 980px;
     margin: 0 auto;
-    padding: 1% 0; }
+    padding: 1% 0;}
     footer .inner p {
       margin: 0;
       color: #bdbec1;
@@ -540,7 +540,7 @@ footer {
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     opacity: 1;
-    transition: all 0.5s ease; }
+    transition: all 0.25s ease; }
     .filtros a:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
@@ -939,7 +939,7 @@ footer {
       width: 29%;
       display: inline-block;
       vertical-align: top;
-      margin: 0 3% 0 0%; }
+      margin: 0 3% 40px 0%; }
       .busqueda-cont .busqueda-resultados .resultado h5 {
         font-weight: normal;
         margin: 0;
@@ -949,7 +949,7 @@ footer {
         border-bottom: 1px solid #00aeef;
         padding: 2% 0;
         letter-spacing: 4px;
-        line-height: 25px;
+        line-height: 18px;
         text-transform: uppercase;}
         .busqueda-cont .busqueda-resultados .resultado h5 strong {
           font-weight: bold;
@@ -982,7 +982,7 @@ footer {
     width: 151px; }
 
 .taller-cont {
-  padding: 1% 0; }
+  padding: 1% 0 0 0; }
   .taller-cont .top {
     padding: 0;
     border-top: 1px solid #707070;
@@ -1046,10 +1046,11 @@ footer {
   color: #00aeef;
   margin: 0;
   font-weight: normal;
-  font-size: 4em;
+  font-size: 4.2em;
   display: inline-block;
   vertical-align: top;
-  z-index: 100; }
+  z-index: 100;
+  font-family: 'ta';}
   .cruz:hover {
     /*color: #00aeef;*/
     color: #aeaeae;
@@ -1063,7 +1064,8 @@ footer {
     color: #bdbec1;
     font-weight: normal;
     letter-spacing: 2px;
-    width: 260px; }
+    width: 260px;
+    font-family: 'futura-book';}
     .cruz p .cruztitle {
       border-top: 1px solid #00aeef;
       border-bottom: 1px solid #00aeef;

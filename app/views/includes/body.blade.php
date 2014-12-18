@@ -105,7 +105,7 @@
 		  <div class="side-box">
 			  <ul class="proy-tags">
 				 <li><a>ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
-				 <li><a>LOCACION<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
+				 <li><a>LOCACIÓN<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
 				 <li><a>TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($pp_tipologia) }}</span></a></li>
 				 <li><a>CLIENTE<br> <span class="data-cliente">{{ strtoupper($pp_cliente) }}</span></a></li>
 				 <li><a>STATUS<br> <span class="data-status">{{ strtoupper($pp_status) }}</span></a></li>
