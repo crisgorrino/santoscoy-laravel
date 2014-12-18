@@ -973,6 +973,7 @@ footer {
         color: #00aeef;
         text-decoration: none;
         float: right;
+        margin-top: 10px;
         display: inline-block;
         font-size: .8em;
         letter-spacing: 4px;}
