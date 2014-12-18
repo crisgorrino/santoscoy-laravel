@@ -69,7 +69,7 @@
   	 <div class="taller-cont cf" >
   	 	<div class="top cf">
   	 		<div class="inner">
-	  			<h2>TALLER</h2> <img src="{{ asset('images/taller/sa.png') }}" alt="SA">
+	  			<h2>TALLER</h2> <img class="logo-sa" src="{{ asset('images/taller/sa.png') }}" alt="SA">
   	 		</div>
   	 	</div>
   	 	<span class="counter"><span id="pos_taller">1</span> / 4</span>  	 	
@@ -192,18 +192,13 @@
          
          <!--REDES-->
          <div class="redes">
-            <a href="">TWITTER</a>
-
+            <a href="">INSTAGRAM</a>
             <a href="">FACEBOOK</a>
-
             <a href="">GOOGLE+</a>
-
             <a href="">PINTEREST</a>
          </div>
          <!--REDES-->
-         
      </div>
-     
   </div>
   @show
   

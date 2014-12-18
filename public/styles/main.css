@@ -21,7 +21,7 @@ html {
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0; background: #1a1919;}
 
 /* HTML5 display definitions
    ========================================================================== */
@@ -501,7 +501,11 @@ header {
 
 footer {
   background-color: #1a1919;
-  border-top: 1px solid #bdbec1; }
+  border-top: 1px solid #bdbec1;
+  position: relative;}
+  footer.active {
+    top: -134px;
+  }
   footer .inner {
     width: 980px;
     margin: 0 auto;
@@ -532,7 +536,7 @@ footer {
     text-decoration: none;
     display: inline-block;
     color: #bdbec1;
-    width: 197px;
+    width: 185px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
     opacity: 1;
@@ -559,7 +563,7 @@ footer {
     color: #bdbec1;
     margin-top: 40px; }
     .filtros .conceptos .conceptos-inner {
-      width: 932px;
+      width: 885px;
       margin: 0 auto 5px auto; }
       .filtros .conceptos .conceptos-inner a {
         color: #bdbec1;
@@ -681,7 +685,11 @@ footer {
 }
 .detalle-proyecto {
   background-color: #1d1c1c;
-  padding: 0; }
+  padding: 0;
+  position: relative;}
+  .detalle-proyecto.active{
+    top: -134px;
+  }
   .detalle-proyecto .inner {
     width: 980px;
     margin: 0 auto; }
@@ -808,6 +816,9 @@ footer {
   background-size: cover;
   z-index: 0;
   width: 100%; }
+  .main.active {
+    top: -135px;
+  }
   .main .main-img {
     position: absolute;
     top: 0;
@@ -826,7 +837,7 @@ footer {
   padding: 1% 0; }
   .contact-cont h2 {
     font-weight: normal;
-    margin: 40px 0 20px 0;
+    margin: 45px 0 20px 0;
     padding: 0 0%;
     color: #3b383a;
     font-size: .9em;
@@ -864,7 +875,7 @@ footer {
     .contact-cont .contact-inner .contact-info {
       border-top: 1px solid #00aeef;
       display: inline-block;
-      margin: 20px 0; }
+      margin: 20px 0 54px 0; }
       .contact-cont .contact-inner .contact-info p {
         border-bottom: 1px solid #00aeef;
         margin: 0;
@@ -888,13 +899,13 @@ footer {
     vertical-align: top;
     width: 420px; }
     .contact-cont .carlossantoscoy h4 {
-      margin: 0 100px;
+      margin: 5px 100px 0 100px;
       text-align: center;
       letter-spacing: 4px;
       font-size: .8em;}
   .contact-cont .redes {
     display: inline-block;
-    margin: 20px 0;
+    margin: 25px 0 20px 0;
     vertical-align: top; }
     .contact-cont .redes a {
       display: block;
@@ -973,13 +984,16 @@ footer {
 .taller-cont {
   padding: 1% 0; }
   .taller-cont .top {
-    padding: 10px 0;
+    padding: 0;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     clear: both;}
+    .taller-cont .logo-sa{
+      margin: 10px 0 0 0;
+    }
     .taller-cont .top h2 {
       font-weight: normal;
-      margin: 0;
+      margin: 0 0 10px 0;
       padding: 0 350px 0 0%;
       color: #3b383a;
       font-size: .9em;

@@ -99,18 +99,18 @@
 	  </div>		
   </div>
   
-  <div class="detalle-proyecto">
+  <div class="detalle-proyecto complete">
 		<div class="inner">  
 		<!-- DETALLES SIDE BOX -->
 		  <div class="side-box">
 			  <ul class="proy-tags">
-				 <li><a href="">ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
-				 <li><a href="">LOCACION<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
-				 <li><a href="">TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($pp_tipologia) }}</span></a></li>
-				 <li><a href="">CLIENTE<br> <span class="data-cliente">{{ strtoupper($pp_cliente) }}</span></a></li>
-				 <li><a href="">STATUS<br> <span class="data-status">{{ strtoupper($pp_status) }}</span></a></li>
-				 <li><a href="">ASOCIADO<br> <span class="data-asociado">{{ strtoupper($pp_asociado) }}</span></a></li>
-				 <li><a href="">DIMENSIÓN<br> <span class="data-dimension">{{ strtoupper($pp_dimension) }}</span></a></li>
+				 <li><a>ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
+				 <li><a>LOCACION<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
+				 <li><a>TIPOLOGÍA<br> <span class="data-tipologia">{{ strtoupper($pp_tipologia) }}</span></a></li>
+				 <li><a>CLIENTE<br> <span class="data-cliente">{{ strtoupper($pp_cliente) }}</span></a></li>
+				 <li><a>STATUS<br> <span class="data-status">{{ strtoupper($pp_status) }}</span></a></li>
+				 <li><a>ASOCIADO<br> <span class="data-asociado">{{ strtoupper($pp_asociado) }}</span></a></li>
+				 <li><a>DIMENSIÓN<br> <span class="data-dimension">{{ strtoupper($pp_dimension) }}</span></a></li>
 			  </ul>
 			  
 			  <span class="vista vista-project">VISTA<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
@@ -127,7 +127,7 @@
 			  <p>COMPARTIR</p>
 			  
 			  <ul class="compartir">
-				  <li><a href="">TWITTER </a></li>
+				  <li><a href="">INSTAGRAM </a></li>
 				  <li><a href="">FACEBOOK </a></li>
 				  <li><a href="">GOOGLE+ </a></li>
 				  <li><a href="">PINTEREST </a></li>
