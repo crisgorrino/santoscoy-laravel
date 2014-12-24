@@ -21,11 +21,11 @@
 			$('.modal-detalle').css({opacity: 1, visibility: "hidden"}).animate({opacity: 0}, 600, function() {});
 		}else{
 			var rutaImg='{{asset("images/close.png")}}';
-			$('.vista-gray').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="[]">');
+			$('.vista-gray').html('CERRAR &nbsp;&nbsp;<img src="'+rutaImg+'" alt="X">');
 			activeEditorial = true;			
 			$('.modal-detalle').css({ opacity: 0, visibility: "visible"}).animate({opacity: 1}, 600, function() {});
 		}
-	}
+	};
 
 	var activeVProject = false;
 	function vistaProject(){
@@ -37,12 +37,29 @@
 			$('.complete').removeClass('active', 10000);
 		}else{
 			var rutaImg='{{asset("images/close-gray.png")}}';
-			$('.vista-project').html('CERRAR<img src="'+rutaImg+'" alt="[]">');
+			$('.vista-project').html('CERRAR<img src="'+rutaImg+'" alt="X">');
 			activeVProject = true;			
 			//$('.complete').addClass('active').animate({opacity: 1}, 600, function() {});
 			$('.complete').addClass('active',10000);
 		}
-	}
+	};
+
+	var activeDProject = false;
+	function detalleProject(){
+		if (activeDProject){
+			var rutaImg='{{asset("images/vista.png")}}';
+			$('.vista-project-1').html('VISTA<img src="'+rutaImg+'" alt="[]">');
+			activeDProject=false;
+			//$('.complete').removeClass('active').animate({opacity: 1}, 600, function() {});
+			$('.complete-1').removeClass('active', 10000);
+		}else{
+			var rutaImg='{{asset("images/close-gray.png")}}';
+			$('.vista-project-1').html('CERRAR<img src="'+rutaImg+'" alt="X">');
+			activeDProject = true;			
+			//$('.complete').addClass('active').animate({opacity: 1}, 600, function() {});
+			$('.complete-1').addClass('active',10000);
+		}
+	};
 	</script>
 	<script type="text/javascript">
 	$(document).ready( function() {
@@ -65,6 +82,13 @@
 		$('.vista-project, .ver-mas').click(function(e){
 			e.preventDefault();
 			vistaProject();
+			//$('.complete').toggleClass('active');
+		})
+
+		//Vista detalle
+		$('.vista-project-1, .ver-mas').click(function(e){
+			e.preventDefault();
+			detalleProject();
 			//$('.complete').toggleClass('active');
 		})
 

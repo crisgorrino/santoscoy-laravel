@@ -223,7 +223,7 @@
 
 			  
 
-			  <span class="vista vista-project">VISTA<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
+			  <span class="vista vista-project-1">VISTA<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
 
 			  
 
@@ -275,7 +275,7 @@
 
                     	@if( is_file($value->path.$value->archivo) )
 
-                            <div class="img-cont complete">
+                            <div class="img-cont complete-1">
 
                                 <img src="{{ asset($value->path.$value->archivo) }}" alt="">
 
