@@ -32,7 +32,7 @@
 
 		  	<img src="{{ asset('images/filtros/filtro-o.png') }}" alt="">
 
-		  	<span>OAP</span>
+		  	<span class="oap">OAP</span>
 
 		  </a><a href="" class="filtro_cat @if(Sess::has('categorias.5')) active @endif" data-id="5">
 
@@ -138,7 +138,8 @@
 
 		  <div class="titulo-main complete">
 
-		  	<h3 class="data-titulo">{{ strtoupper($pp_titulo) }}</h3>
+		  	
+		  	<h3 class="data-titulo">{{ strtoupper($pp_titulo) }} <div class="line"></div></h3>
 
 		  </div>
 
