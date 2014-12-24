@@ -20,9 +20,7 @@
 
 		  	<span class="interior">INTERIORISMO</span>
 
-		  </a>
-
-		  <a href="" class="filtro_cat @if(Sess::has('categorias.3')) active @endif" data-id="3">
+		  </a><a href="" class="filtro_cat @if(Sess::has('categorias.3')) active @endif" data-id="3">
 
 		  	<img src="{{ asset('images/filtros/filtro-s.png') }}" alt="">
 
