@@ -12,15 +12,13 @@
 
 		  	<img src="{{ asset('images/filtros/filtro-a.png') }}" alt="">
 
-		  	<span>ARQUITECTURA</span>
+		  	<span class="arqui">ARQUITECTURA</span>
 
-		  </a>
-
-		  <a href="" class="filtro_cat @if(Sess::has('categorias.2')) active @endif" data-id="2">
+		  </a><a href="" class="filtro_cat @if(Sess::has('categorias.2')) active @endif" data-id="2">
 
 		  	<img src="{{ asset('images/filtros/filtro-i.png') }}" alt="">
 
-		  	<span>INTERIORISMO</span>
+		  	<span class="interior">INTERIORISMO</span>
 
 		  </a>
 
@@ -28,23 +26,19 @@
 
 		  	<img src="{{ asset('images/filtros/filtro-s.png') }}" alt="">
 
-		  	<span>SUSTENTABILIDAD</span>
+		  	<span class="sustenta">SUSTENTABILIDAD</span>
 
-		  </a>
-
-          <a href="" class="filtro_cat @if(Sess::has('categorias.4')) active @endif" data-id="4">
+		  </a><a href="" class="filtro_cat @if(Sess::has('categorias.4')) active @endif" data-id="4">
 
 		  	<img src="{{ asset('images/filtros/filtro-o.png') }}" alt="">
 
 		  	<span>OAP</span>
 
-		  </a>
-
-          <a href="" class="filtro_cat @if(Sess::has('categorias.5')) active @endif" data-id="5">
+		  </a><a href="" class="filtro_cat @if(Sess::has('categorias.5')) active @endif" data-id="5">
 
 		  	<img src="{{ asset('images/filtros/filtro-p.png') }}" alt="">
 
-		  	<span>PAISAJISMO</span>
+		  	<span class="paisa">PAISAJISMO</span>
 
 		  </a>
 
@@ -232,23 +226,11 @@
 
 			  
 
-		  </div>
-
-		 <!-- DETALLES SIDE BOX -->
-
-		 <!-- DESCRIPCION CENTER BOX -->
-
-		  <div class="center-box justify">
+		  </div><!-- DETALLES SIDE BOX --><!-- DESCRIPCION CENTER BOX --><div class="center-box justify">
 
 			  <p class="data-descripcion">{{ $pp_descripcion }}</p>
 
-		  </div>
-
-		  <!-- DESCRIPCION CENTER BOX -->
-
-		  <!-- COMPARTIR SIDE BOX -->
-
-		  <div class="side-box ">
+		  </div><!-- DESCRIPCION CENTER BOX --><!-- COMPARTIR SIDE BOX --><div class="side-box ">
 
 			  <p>COMPARTIR</p>
 
