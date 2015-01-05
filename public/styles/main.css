@@ -610,7 +610,7 @@ footer {
         .filtros .conceptos .conceptos-inner a:hover {
           color: #00aeef; }
       .filtros .conceptos .conceptos-inner a.active {
-        color: #00aeef; }
+        color: #00aeef; -webkit-filter: grayscale(0);-moz-filter: grayscale(0); -o-filter: grayscale(0); -ms-filter: grayscale(0); filter: grayscale(0);}
 
 .main-gal {
   position: relative;
