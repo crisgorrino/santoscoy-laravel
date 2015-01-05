@@ -15,6 +15,7 @@
                     <th width="2%" class="title">Editar</th>
                     <th width="20%" class="title"><strong>Título:</strong></th>
                     <th width="13%" class="title"><strong>Categor&iacute;as:</strong></th>
+                    <th width="10%" class="title"><strong>Arquitectura:</strong></th>
                     <th width="10%" class="title"><strong>Locación:</strong></th>
                     <th width="10%" class="title"><strong>Cliente:</strong></th>
                     <th width="10%" class="title" nowrap="nowrap"><strong>Status:</strong></th>
@@ -54,6 +55,7 @@
                             </td>
                             <td align="left">{{ $value->titulo }}</td>
                             <td align="left">@foreach($value->categorias as $cat) <p>{{ $cat->nombre }}</p> @endforeach</td>
+                            <td nowrap="nowrap">{{ $value->arquitectura}}</td>
                             <td nowrap="nowrap">{{ $value->locacion}}</td>
                             <td nowrap="nowrap">{{ $value->cliente }}</td>
                             <td nowrap="nowrap">{{ $value->status }}</td>

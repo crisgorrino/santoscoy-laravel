@@ -4,7 +4,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
 	<meta name="description" content="Arquitectos Guadalajara" >
 	<meta property="og:site_name" content="Santoscoy" name="application-name">
 	<meta property="og:title" content="@yield('meta-og-title')" name="application-name">

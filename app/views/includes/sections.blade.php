@@ -1,38 +1,51 @@
-
- <!--section pages-->
-  <div class="section-pages-cont">
+<!--section pages-->
+<div class="section-pages-cont">
 	
-	@section('editorial')  
+  @section('editorial')  
   	<div class="editorial-cont cf">
- 	 	<div class="top cf"> 
- 	 		<div class="inner"> 	 		
-	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista.png') }}" alt="[]"></span>
- 	 		</div>	
-  	 	</div>
-  	 	<span class="counter">14 / 27</span>
-  	 	<!--SLIDER-->
-  	 	<div class="slide-container">
+  		<div class="modal-detalle">
+      		<div class="slide-container">
 	  	 	<div id="slider1" class="jcarousel-wrapper">	
 				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
 				<div class="viewport jcarousel">
 					<ul class="overview">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li><img src="{{ asset('images/editorial/edicion.jpg') }}" alt=""></li>
-						<li>5</li>
-						<li>6</li>
-						<li>7</li>
-						<li>8</li>
-						<li>9</li>
-						<li>10</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
+                    @if( $editorial )
+						<?php $pos = 1 ?>
+                        @foreach( $editorial as $value )
+                            <li class="detalle-editorial" data-pos="{{ $pos }}">
+                            	@if( is_file($value->path.$value->archivo) )
+	                            	<img src="{{asset ($value->path.$value->archivo)}}">
+                                @endif
+                                <div class="detalle"><span>VER PUBLICACIÓN</span>{{ $value->descripcion}} <a href="//{{ $value->url }}" target="_blank">{{ $value->url }}</a></div></li>
+                            <?php $pos++; ?>
+                        @endforeach
+                    @endif
+					</ul>
+				</div>
+				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>
+		    </div>
+  	 	</div>	
+  	 	<!--SLIDER-->
+	    </div>
+ 	 	<div class="top cf"> 
+ 	 		<div class="inner"> 	 		
+	  			<h2>EDITORIAL</h2> <img src="{{ asset('images/editorial/design-logo.png') }}" alt="SA"> <span class="vista-gray">VISTA &nbsp;&nbsp;<img src="{{ asset('images/vista-black.png') }}" alt="[]"></span>
+ 	 		</div>	
+  	 	</div>
+  	 	<span class="counter"><span id="pos_editorial">1</span> / {{ $totalEditorial }}</span>
+  	 	<!--SLIDER-->
+  	 	<div class="slide-container slide-principal">
+	  	 	<div id="slider1" class="jcarousel-wrapper">
+				<a class="buttons prev jcarousel-control-prev" href="#">&#60;</a>
+				<div class="viewport jcarousel">
+					<ul class="overview">
+                    @if( $editorial )
+						<?php $pos = 1 ?>
+                        @foreach( $editorial as $value )
+                            <li class="hover-editorial" data-pos="{{ $pos }}" data-editorial='{{ json_encode($value) }}'><span class="">{{ $value->no_publicacion }}</span></li>
+                            <?php $pos++; ?>
+                        @endforeach
+                    @endif
 					</ul>
 				</div>
 				<a class="buttons next jcarousel-control-next" href="#">&#62;</a>
@@ -56,11 +69,11 @@
   	 <div class="taller-cont cf" >
   	 	<div class="top cf">
   	 		<div class="inner">
-	  			<h2>TALLER</h2> <img src="{{ asset('images/taller/sa.png') }}" alt="SA">
+	  			<h2>TALLER</h2> <img class="logo-sa" src="{{ asset('images/taller/sa.png') }}" alt="SA">
   	 		</div>
   	 	</div>
-  	 	
-  	 	<div id="tab-container" class="tab-container">
+  	 	<span class="counter"><span id="pos_taller">1</span> / 4</span>  	 	
+  	 	<div id="tab-container" class="tab-container top" style="background: #C0C0C0;">
 	  	 	<div class="taller-imgs panel-container">
 	  	 		
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
@@ -122,154 +135,88 @@
 	  	 		
 	  	 	</div>
 	  	 	  	 	
-	  	 	<ul class='etabs'>
-		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
-		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li> -
-		  	 	<li class='tab'><a href="#iluminacion">ILUMINACIÓN</a></li> -
-		  	 	<li class='tab'><a href="#verificacion">VERIFICACIÓN</a></li> <!---
+	  	 	<ul class='etabs' style="background-color: #CCC;">
+		  	 	<li class='tab'><a class="item-taller" data-pos="1" href="#preparacion">PREPARACÍON</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="2" href="#incubacion">INCUBACIÓN</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="3" href="#iluminacion">ILUMINACIÓN</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="4" href="#verificacion">VERIFICACIÓN</a></li> <!---
 		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
 		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li>-->
 	  	 	</ul>  	 	
 	    </div>
   	 </div>
-	  @show
+  @show
 	  
-	  @section('contacto')
-	  <div class="contact-cont cf">
-	  	
-	  	<div class="inner cf">
-		  	<h2 class="left">Contacto</h2> <!--<span class="close right">CERRAR X</span>-->
-		</div>  	
-			 <nav>
-			 	<div class="inner cf">
-					 <ul>
-						 <li><a href="">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
-						 <li><a href="">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-						 <li><a href="">CONTACTANOS <img src="{{ asset('images/contacto/email.png') }}"></a></li>
-					 </ul>
-			 	</div>	 
-			 </nav> 
+  @section('contacto')
+  <div class="contact-cont cf">
+    
+    <div class="inner cf">
+        <h2 class="left">Contacto</h2> <!--<span class="close right">CERRAR X</span>-->
+    </div>  	
+         <nav>
+            <div class="inner cf">
+                 <ul>
+                     <li><a href="mailto:carlossantoscoy@santoscoyarquitectos.com?subject={{ rawurlencode('COMPARTIR CONTACTO SANTOSCOY') }}&body={{ rawurlencode('SANTOSCOY ARQUITECTOS
+                     
+	T. +33.3627.5594 / 95
+	carlossantoscoy@santoscoyarquitectos.com
+	www.santoscoyarquitectos.com
+	AV. PARAISOS 170
+	CIUDAD GRANJA
+	ZAP., JAL., MX. CP 45010') }}">COMPARTIR CONTACTO <img src="{{ asset('images/contacto/comp-cont.png') }}"></a></li>
+                     <li><a href="mailto:carlossantoscoy@santoscoyarquitectos.com?subject={{ rawurlencode('CONTACTO CARLOS SANTOSCOY') }}">ENVIAR E-MAIL <img src="{{ asset('images/contacto/email.png') }}"></a></li>
+                     <li><a>SÍGUENOS <img src="{{ asset('images/contacto/siguenos.png') }}"></a></li>
+                 </ul>
+            </div>	 
+         </nav> 
 
-	  	
-		 <div class="contact-inner">
-		 	<!--info contacto-->
-			 <div class="contact-info">
-				 <p>SANTOSCOY ARQUITECTOS</p>
-				 <p>T. +33.3627.5594 / 95</p>
-				 <p>carlossantoscoy@santoscoyarquitectos.com</p>
-				 <p>www.santoscoyarquitectos.com</p>
-				 <p>Av. paraisos 170</p>
-				 <p>ciudad granja</p>
-				 <p>zap., jal., mx. cp 45010</p>
-			 </div>
-			 <!--info contacto-->
-			 
-			 <!-- Carlos Santoscoy-->
-			 <div class="carlossantoscoy">
-				 <h4>CARLOS SANTOSCOY</h4>
-			 </div>
-			 <!-- Carlos Santoscoy-->
-			 
-			 <!--REDES-->
-			 <div class="redes">
-				<a href="">TWITTER</a>
-
-				<a href="">FACEBOOK</a>
-
-				<a href="">GOOGLE+</a>
-
-				<a href="">PINTEREST</a>
-			 </div>
-			 <!--REDES-->
-			 
-		 </div>
-		 
-	  </div>
-	  @show
-	  @section('busqueda')
-	  <div class="busqueda-cont cf">
-		 <form class="cf">
-		 	
-		 	<div class="inner cf">
-			 	<p class="left"><label>BUSCAR</label> <input type="text" placeholder="LOBBY 33"></p> 
-			 	<!--<span class="close-busq right">CERRAR X</span>-->
-		 	</div>
-		 	 	
-		 </form>
-		 
-		 <div class="busqueda-resultados">
-		 	
-		 	<!--resultado 1-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 1-->
-			
-			<!--resultado 1-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 1-->
-			
-			<!--resultado 1-->
-		 	<div class="resultado cf">
-			 	<h5>
-				 	<strong>LOBBY 33</strong>
-				 	ARQUITECTURA<br>
-				 	INTERIORISMO 2014
-			 	</h5>
-			 	
-			 	<p><span>LOBBY 33</span> ipsum dolor sit amet, consectetur adipiscing elit. LOBBY 33 quis bibendum nulla</p>
-			 	
-			 	<div class="detalles">
-				 	<p>locación: méxico DF</p>
-				 	<p>tipología: habitacional</p>
-				 	<p>cliente: fullconcept</p>
-				 	<p>status: completo</p>
-				 	<p>asociado: bdp</p>
-				 	<p>dimensión: 1000m2-</p>  
-			 	</div>
-			 	<a href="#">VER MAS</a>
-		 	</div>
-			<!--resultado 1-->
-			 
-		 </div>
-		  <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">
-	  </div>
-
-	@show	  
-	  
+    
+     <div class="contact-inner">
+        <!--info contacto-->
+         <div class="contact-info">
+             <p>SANTOSCOY ARQUITECTOS</p>
+             <p>T. +33.3627.5594 / 95</p>
+             <p>carlossantoscoy@santoscoyarquitectos.com</p>
+             <p>www.santoscoyarquitectos.com</p>
+             <p>Av. paraisos 170</p>
+             <p>ciudad granja</p>
+             <p>zap., jal., mx. cp 45010</p>
+         </div>
+         <!--info contacto-->
+         
+         <!-- Carlos Santoscoy-->
+         <div class="carlossantoscoy">
+             <h4>CARLOS SANTOSCOY</h4>
+         </div>
+         <!-- Carlos Santoscoy-->
+         
+         <!--REDES-->
+         <div class="redes">
+            <a href="">INSTAGRAM</a>
+            <a href="">FACEBOOK</a>
+            <a href="">GOOGLE+</a>
+            <a href="">PINTEREST</a>
+         </div>
+         <!--REDES-->
+     </div>
   </div>
-  <!--section pages-->
+  @show
+  
+  @section('busqueda')
+  <div class="busqueda-cont cf">
+     <form class="cf" id="frm_search" name="frm_search" method="post">
+        
+        <div class="inner cf">
+            <p class="left"><label>BUSCAR</label> <input type="text" id="search" name="search" placeholder="LOBBY 33"></p> 
+            <span class="close-busq right">CERRAR <img src="{{ asset('images/close.png') }}" alt="[]"></span>
+        </div>
+            
+     </form>
+     
+     <div class="busqueda-resultados"></div>
+      <img src="{{ asset('images/busqueda/figuras.png') }}" alt="" class="figuras">
+  </div>
+  @show	  
+	  
+</div>
+<!--section pages-->

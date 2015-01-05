@@ -180,10 +180,9 @@
     <script type="text/javascript" src="{{ asset('js/jquery.lightbox_me.js') }}"></script>
     <!-- Lightbox agregar comentarios -->
     
-    <script type="text/javascript">	
-	
+    <script type="text/javascript">
 	$(document).ready(function(e) {
-		$('.delete_selected').click(function(e){
+		$('body').on('click', '.delete_selected', function(e){
 			e.preventDefault();
 			
 			var total = $('input.checkbox_del:checked').length;
@@ -202,7 +201,7 @@
 			
 		});
 		
-        $('#checkall').click(function(){
+        $('body').on('click', '#checkall', function(){
 			if($(this).is(':checked')) {
 				$('.checkbox_del').prop('checked', true);
 			}
@@ -211,7 +210,7 @@
 			}
 		});
 		
-		$('.checkbox_del').click(function(){
+		$('body').on('click', '.checkbox_del', function(){
 			
 			if( $(this).not(':checked') ){
 				$('#checkall').prop('checked', false);

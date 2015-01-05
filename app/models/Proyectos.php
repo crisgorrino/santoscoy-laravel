@@ -20,7 +20,8 @@ class Proyectos extends Eloquent {
 	* Ambito para filtrar por solu publicados
 	*
 	*/
-	public function scopePublished($query){
+	public function scopePublished($query)
+	{
 		return $query->where('published', '=', 1);
 	}
 	
@@ -28,7 +29,8 @@ class Proyectos extends Eloquent {
 	* Ambito para filtrar por solu publicados
 	*
 	*/
-	public function scopeNotRemoved($query){
+	public function scopeNotRemoved($query)
+	{
 		return $query->where('removed', '=', 0);
 	}
 	
@@ -101,6 +103,8 @@ class Proyectos extends Eloquent {
 	{
 		//Eliminar registros en DB		
 		//ProductoImagenes::where('proyecto_id', '=', $this->id)->delete();
+		
+		CategoriaRelacion::where('proyecto_id', '=', $this->id)->delete();
 		
 		//Eliminar archivos archivo
 		$path = public_path().'/'.$this->pathUpload.'proyectos/id_'.$this->id.'/';

@@ -1,12 +1,12 @@
-
 $(document).ready(function(){
 	//hide menu divs
 	$('.taller-cont').hide();
 	$('.editorial-cont').hide();
 	$('.contact-cont').hide();
 	$('.busqueda-cont').hide()
-	
-	
+
+	var time = 1050;
+
 	//general close button
 	$('.close').click(function(){
 		$(this).parent().slideUp('slow');
@@ -17,12 +17,17 @@ $(document).ready(function(){
 	$('.close-busq').click(function(){
 		$('.busqueda-cont').slideUp('slow');
 	})
-	
+
 	//proyectos toggle
 	$('.proyectos').click(function(e){
 		e.preventDefault();
+
+		activeEditorial=true;
+		modalEditorial();
+
+		scrollTop();
+		$('.section-pages-cont').children('div').slideUp(time);
 		
-		$('.section-pages-cont').children('div').slideUp('slow');
 		//$('.section-pages-cont').children('div').siblings().hide();
 		
 	});
@@ -30,32 +35,60 @@ $(document).ready(function(){
 	//contacto toggle
 	$('.contacto').click(function(e){
 		e.preventDefault();
-		$('.contact-cont').slideToggle('slow');
-		$('.contact-cont').siblings().hide();
+
+		activeEditorial=true;
+		modalEditorial();
+
+		scrollTop();
+		$('.contact-cont').siblings().slideUp(time).promise().done(function(){
+			$('.contact-cont').slideToggle(time);
+		});
+		
+		//$('.contact-cont').siblings().hide();
 	});
 	
 	//busqueda toggle
 	$('.busqueda').click(function(e){
 		e.preventDefault();
-		$('.busqueda-cont').slideToggle('slow');
-		$('.busqueda-cont').siblings().hide();
+
+		activeEditorial=true;
+		modalEditorial();
+
+		scrollTop();
+		$('.busqueda-cont').siblings().slideUp(time).promise().done(function(){
+			$('.busqueda-cont').slideToggle(time);			
+		});
 	});
 	
 	//taller toggle
 	$('.taller').click(function(e){
 		e.preventDefault();
-		$('.taller-cont').slideToggle('slow');
-		$('.taller-cont').siblings().hide();
+
+		activeEditorial=true;
+		modalEditorial();
+
+		scrollTop();
+		$('.taller-cont').siblings().slideUp(time).promise().done(function(){
+			$('.taller-cont').slideToggle(time);			
+		});
 	});
 	
 	//taller toggle
 	$('.editorial').click(function(e){
 		e.preventDefault();
-		$('.editorial-cont').slideToggle('slow');
-		$('.editorial-cont').siblings().hide();
+
+		activeEditorial=true;
+		modalEditorial();
+		
+		scrollTop();
+		$('.editorial-cont').siblings().slideUp(time).promise().done(function(){
+			$('.editorial-cont').slideToggle(time);			
+		});
 	});
 
-
+	$('.item-taller').click(function(){
+		$('#pos_taller').html($(this).data('pos'));
+	});
 
 	//taller toggle para imagenes
 	//preparacion
@@ -81,3 +114,9 @@ $(document).ready(function(){
 	});
 	
 });
+
+function scrollTop(){
+	$('html, body').animate({
+		scrollTop: $("body").offset().top
+	}, 1000);
+}

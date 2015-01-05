@@ -1,12 +1,12 @@
 @extends('admin.layouts.admin_master')
 
-@section('title') Productos @stop
-@section('header-title') <h1>Productos <small>@if( $proyecto )Editar @else Agregar @endif</small></h1> @stop
+@section('title') Proyectos @stop
+@section('header-title') <h1>Proyectos <small>@if( $proyecto )Editar @else Agregar @endif</small></h1> @stop
 @section('menu-proyectos-active') active @stop
 @section('proyectos-active') active @stop
 
 @section('breadcrumb')
-	<li class="active">Productos</li>
+	<li class="active">Proyectos</li>
 @stop
 
 @section('content') 
@@ -176,6 +176,11 @@
                         for (var i = 0; i < (d.find('input').not('input[type=file]').not('input[type=submit]').length); i++) { 
                             // buscará todos los input menos el valor "file" y "sumbit . Serán diferenciados en el PHP gracias al "name" de cada uno.
                             formdata.append( (d.find('input').not('input[type=file]').not('input[type=submit]').eq(i).attr("name")),(d.find('input').not('input[type=file]').not('input[type=submit]').eq(i).val()) );            
+                        }
+						
+						for (var i = 0; i < (d.find('textarea').length); i++) { 
+                            // buscará todos los input menos el valor "file" y "sumbit . Serán diferenciados en el PHP gracias al "name" de cada uno.
+                            formdata.append( (d.find('textarea').eq(i).attr("name")),(d.find('textarea').eq(i).val()) );            
                         }
             
                         // Arrancamos el ajax    
