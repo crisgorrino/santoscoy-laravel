@@ -954,7 +954,8 @@ footer {
       color: #322f31;
       padding-bottom: 15px;
       font-size: .8em;
-      letter-spacing: 4px; }
+      letter-spacing: 4px; }      
+     .contact-cont .redes a:hover{color:#00aeef;}
 
 .busqueda-cont {
   padding: 1% 0; }
