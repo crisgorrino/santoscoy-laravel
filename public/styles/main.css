@@ -1070,7 +1070,7 @@ footer {
     margin: 0; }
     .taller-cont ul li {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       width: 145px;}
       .taller-cont ul li a {
         color: #3b383a;
