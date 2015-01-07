@@ -1211,9 +1211,14 @@ footer {
   }
   .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .detalle a{
     text-decoration: none;
-    color: #00bff3;
+    color: #bdbec1;
     display: block;
   }
+  
+  .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial .detalle a:hover{
+	  color:#00bff3;
+  }
+  
   .editorial-cont .modal-detalle #slider1 .overview .detalle-editorial img{
     width: 100%;
     vertical-align: bottom;
