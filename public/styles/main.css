@@ -776,7 +776,8 @@ footer {
         display: block;
         font-size: .9em;
         letter-spacing: 4px;
-        padding: 5% 0; }
+        padding: 5% 0; }       
+        .side-box .compartir li a:hover{color:#00aeef;} 
 
 .center-box {
   width: 500px;
