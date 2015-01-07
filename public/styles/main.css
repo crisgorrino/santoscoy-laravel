@@ -954,7 +954,8 @@ footer {
       color: #322f31;
       padding-bottom: 15px;
       font-size: .8em;
-      letter-spacing: 4px; }
+      letter-spacing: 4px; }      
+     .contact-cont .redes a:hover{color:#00aeef;}
 
 .busqueda-cont {
   padding: 1% 0; }
@@ -1070,7 +1071,7 @@ footer {
     margin: 0; }
     .taller-cont ul li {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       width: 145px;}
       .taller-cont ul li a {
         color: #3b383a;
