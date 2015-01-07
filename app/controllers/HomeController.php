@@ -272,7 +272,7 @@ class HomeController extends BaseController {
 	public function postAjax_search()
 	{
 		
-		if( Request::ajax() and Input::has('search') ){
+		if( Request::ajax() ){
 			$limit=3;//default 3
 			
 			$proyectos = Proyectos::where(function($where){
