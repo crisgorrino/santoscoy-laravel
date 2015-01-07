@@ -361,12 +361,23 @@
 	
 	var timeout;
 	$('body').on('keyup', '#search', function(e){
+		e.preventDefault();
+				
 		if(timeout) {
 			clearTimeout(timeout);
 			timeout = null;
 		}
 		timeout = setTimeout(function(){ busqueda(); }, 800);
 	});
+	
+	$('body').on('keypress', '#frm_search', function(e){
+		if (e.keyCode == 10 || e.keyCode == 13){
+			//alert('simon');
+			//e.preventDefault();
+			return false;
+		}
+	});
+	
 	
 	function busqueda()
 	{
