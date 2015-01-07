@@ -905,7 +905,7 @@ footer {
           font-size: .8em;
           letter-spacing: 2px; }
           .contact-cont nav ul li a:hover {
-            color: #00aeef; }
+            color: #00aeef; cursor:pointer;}
           .contact-cont nav ul li a img {
             display: inline-block;
             vertical-align: top; 
