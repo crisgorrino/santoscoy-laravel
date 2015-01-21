@@ -75,7 +75,8 @@
   	 	<span class="counter"><span id="pos_taller">1</span> / 4</span>  	 	
   	 	<div id="tab-container" class="tab-container top" style="background: #C0C0C0;">
 	  	 	<div class="taller-imgs panel-container">
-	  	 		
+	  	 			  	 		
+	  	 		<div id="preparacion">
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
@@ -107,39 +108,125 @@
 	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
 	  	 				</p>
 	  	 			</h4>
-	  	 		
-	  	 		<div id="preparacion">
+
 		  	 		<img src="{{ asset('images/taller/foto-taller-1.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="incubacion">
+	  	 			<h4 class="cruz" style="top:75px; left:250px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:125px; left:750px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:200px; left:200px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:270px; left:550px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+
 		  	 		<img src="{{ asset('images/taller/foto-taller-2.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="iluminacion">
+	  	 			<h4 class="cruz" style="top:75px; left:250px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:125px; left:750px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:200px; left:200px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:270px; left:550px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+
 		  	 		<img src="{{ asset('images/taller/foto-taller-1.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="verificacion">
+	  	 			<h4 class="cruz" style="top:75px; left:250px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:125px; left:750px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:200px; left:200px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+	  	 			
+	  	 			<h4 class="cruz" style="top:270px; left:550px;">
+	  	 				+
+	  	 				<p>
+	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
+	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 				</p>
+	  	 			</h4>
+
 		  	 		<img src="{{ asset('images/taller/foto-taller-3.jpg') }}" alt="">
 	  	 		</div>
-	  	 		
-	  	 		<!--<div id="preparacion">
-		  	 		<img src="{{ asset('images/taller/foto-taller-1.jpg') }}" alt="">
-	  	 		</div>
-	  	 		
-	  	 		<div id="incubacion">
-		  	 		<img src="{{ asset('images/taller/foto-taller-2.jpg') }}" alt="">
-	  	 		</div>-->	
-	  	 		
-	  	 		
+	  	 			  	 		
 	  	 	</div>
 	  	 	  	 	
 	  	 	<ul class='etabs' style="background-color: #CCC;">
-		  	 	<li class='tab'><a class="item-taller" data-pos="1" href="#preparacion">PREPARACÍON</a></li> -
-		  	 	<li class='tab'><a class="item-taller" data-pos="2" href="#incubacion">INCUBACIÓN</a></li> -
-		  	 	<li class='tab'><a class="item-taller" data-pos="3" href="#iluminacion">ILUMINACIÓN</a></li> -
-		  	 	<li class='tab'><a class="item-taller" data-pos="4" href="#verificacion">VERIFICACIÓN</a></li> <!---
+		  	 	<li class='tab'><a class="item-taller" data-pos="1" href="#preparacion">PROFUNDIZAR</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="2" href="#incubacion">TRAZAR</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="3" href="#iluminacion">DEFINIR</a></li> -
+		  	 	<li class='tab'><a class="item-taller" data-pos="4" href="#verificacion">CREAR</a></li> <!---
 		  	 	<li class='tab'><a href="#preparacion">PREPARACÍON</a></li> -
 		  	 	<li class='tab'><a href="#incubacion">INCUBACIÓN</a></li>-->
 	  	 	</ul>  	 	
