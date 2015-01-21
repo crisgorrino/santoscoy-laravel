@@ -80,32 +80,33 @@
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 1<!--<br>PROFUNDIZAR--></span>
+	  	 					<span>Cada obra arquitectónica es proyectada para convertirse en el hábitat de personas, por ello cada detalle nos acerca más a un conocimiento profundo de las 									necesidades y los alcances que un proyecto.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:125px; left:750px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 2<!--<br>INCUBACI&Oacute;N--></span>
+	  	 					<span>El conocimiento de las personas nos acerca a cumplir sus expectativas, hay una inmersión profunda en el contexto de la obra, 
+	  	 					para situar y definir las propuestas.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:200px; left:200px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 3<!--<br>ILUMINACI&Oacute;N--></span>
+	  	 					<span>Conjugar la sustentabilidad del proyecto, su viabilidad ante el entorno, con el paisaje y el diseño de la biodiversidad que lo acompañará, así como los procesos 									específicos que el uso de la obra requiera.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:270px; left:550px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 4<!--<br>VERIFICACI&Oacute;N--></span>
+	  	 					<span>Un proyecto sustentable no sólo es amigable con el ambiente; sino que busca aprovechar y optimizar cada recurso de manera que una vez construido, 												sus consumos sean mínimos. </span>	
 	  	 				</p>
 	  	 			</h4>
 
@@ -116,32 +117,32 @@
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 1<!--<br>PREPARACI&Oacute;N--></span>
+	  	 					<span>Para alcanzar la belleza y la perfección es necesario imaginar, inventar, replantear, desechar, y evaluar ideas que al contacto con la realidad se inserten en un 								panorama previo; conceptualizando el proyecto y haciéndolo rentable.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:125px; left:750px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 2<!--<br>INCUBACI&Oacute;N--></span>
+	  	 					<span>El diseño arquitectónico son trazos que evidencian una ejecución que vaya de acuerdo a los objetivos, a los planes previos, a los tiempos programados, y que son 									llevados a lienzos en blanco que les permiten crecer.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:200px; left:200px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 3<!--<br>ILUMINACI&Oacute;N--></span>
+	  	 					<span>El proyecto toma una forma clave, que conecta al creador con las personas, siendo visualmente claro, para que éstas crean y se vean reflejadas en él.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:270px; left:550px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 4<!--<br>VERIFICACI&Oacute;N--></span>
+	  	 					<span>La arquitectura subraya así, esta conexión entre la idea y las líneas, entre la quimera y lo real. Y debe ser consciente de que lo que inició como bosquejo, vivirá 								y afectará la mancha urbana de una ciudad.</span>	
 	  	 				</p>
 	  	 			</h4>
 
@@ -152,32 +153,32 @@
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 1<!--<br>PREPARACI&Oacute;N--></span>
+	  	 					<span>No todos los procesos son ejecutados por una sola persona; los equipos son eso, unión de liderazgos con un fin común que requiere talento de artistas de la forma y de la técnica.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:125px; left:750px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 2<!--<br>INCUBACI&Oacute;N--></span>
+	  	 					<span>Por un momento ambas obras se cruzan para fusionar estética y posibilidad; piezas que van encajando de a poco para dar continuidad a la integración final del proyecto.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:200px; left:200px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 3<!--<br>ILUMINACI&Oacute;N--></span>
+	  	 					<span>El diseño de interiores y exteriores dará una forma sólida a las ideas previas, a su correcto acomodo en el rompecabezas arquitectónico y a su función final y sus beneficios.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:270px; left:550px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 4<!--<br>VERIFICACI&Oacute;N--></span>
+	  	 					<span>Combinación de texturas, formas, colores que definen el destino absoluto de una creación que cumpla con expectativas e incluso las supere, para lograr un espacio incomparable.</span>	
 	  	 				</p>
 	  	 			</h4>
 
@@ -188,32 +189,32 @@
 	  	 			<h4 class="cruz" style="top:75px; left:250px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 1<br>PREPARACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 1<!--<br>PREPARACI&Oacute;N--></span>
+	  	 					<span>La puntualización de los detalles  se traducen ya, en un punto de partida para comenzar la labor más ardua, que es el dar vida al diseño y la optimización de costos para el constructor.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:125px; left:750px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 2<br>INCUBACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 2<!--<br>INCUBACI&Oacute;N--></span>
+	  	 					<span>La estafeta artística y técnica que generó la imaginería y el papel, pasa ahora a las manos de especialistas en el modelado de la estructura y la realidad. La obra comienza a ser.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:200px; left:200px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 3<br>ILUMINACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 3<!--<br>ILUMINACI&Oacute;N--></span>
+	  	 					<span>La materialización y el cuidado de una obra se conciben bajo premisas específicas, mismas que deben continuar inamovibles por su filosofía y las revisiones previas de factibilidad y gestión.</span>	
 	  	 				</p>
 	  	 			</h4>
 	  	 			
 	  	 			<h4 class="cruz" style="top:270px; left:550px;">
 	  	 				+
 	  	 				<p>
-	  	 					<span class="cruztitle">ETAPA 4<br>VERIFICACI&Oacute;N</span>
-	  	 					<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum.</span>	
+	  	 					<span class="cruztitle">ETAPA 4<!--<br>VERIFICACI&Oacute;N--></span>
+	  	 					<span>La creación de un sitio ideal para las personas es minucioso, la arquitectura da cobijo a contextos de vida y forma estructuras que las contienen. Es el arte de habitar y crear espacios funcionales y hacerlos públicos, para todos.</span>	
 	  	 				</p>
 	  	 			</h4>
 
