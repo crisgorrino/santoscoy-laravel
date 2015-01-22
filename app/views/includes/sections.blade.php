@@ -54,12 +54,9 @@
   	 	<!--SLIDER-->
   	 	
   	 	<div class="edicion-desc center">
-	  	 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis bibendum nulla. Nullam tincidunt vulputate bibendum. Phasellus convallis, velit vitae fringilla facilisis, nunc elit vulputate ante, non dictum sem massa at neque. Maecenas feugiat mollis arcu, lacinia dapibus diam fringilla ut. Ut nec euismod dolor. Vestibulum pellentesque urna eu cursus dapibus. Vestibulum quis viverra tellus.</p>
-
-<p>Nullam tincidunt mi dolor, ultrices hendrerit metus egestas nec. Nullam iaculis sed tellus eget pretium. Mauris tempus a magna at laoreet. Fusce sagittis risus ut quam eleifend feugiat. Maecenas vitae risus in enim feugiat semper id quis lectus. Curabitur nec ante consequat, ultrices nunc.</p>
-
-<p>interdum diam. Etiam sollicitudin feugiat risus quis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-
+  	 	
+	  	 	<p>Publicación independiente dedicada a la búsqueda, investigación y crítica de diseño. Una revista que muestra al mundo grandes proyectos de arquitectura e interiorismo mexicano, desde un punto de vista metódico, abierto y ecléctico, mediante selecciones minuciosas, estéticas innovadoras, diseños y creatividad de alto nivel que mantienen una constante interacción entre artistas y lectores.</p>
+	  	 	
   	 	</div>
   	 	 	
 	</div>
