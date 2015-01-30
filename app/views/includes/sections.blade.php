@@ -107,7 +107,7 @@
 	  	 				</p>
 	  	 			</h4>
 
-		  	 		<img src="{{ asset('images/taller/foto-taller-1.jpg') }}" alt="">
+		  	 		<img src="{{ asset('images/taller/profundizar/1_1.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="incubacion">
@@ -143,7 +143,7 @@
 	  	 				</p>
 	  	 			</h4>
 
-		  	 		<img src="{{ asset('images/taller/foto-taller-2.jpg') }}" alt="">
+		  	 		<img src="{{ asset('images/taller/taller/2_1.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="iluminacion">
@@ -179,7 +179,7 @@
 	  	 				</p>
 	  	 			</h4>
 
-		  	 		<img src="{{ asset('images/taller/foto-taller-1.jpg') }}" alt="">
+		  	 		<img src="{{ asset('images/taller/definir/3_1.jpg') }}" alt="">
 	  	 		</div>
 	  	 		
 	  	 		<div id="verificacion">
@@ -215,7 +215,7 @@
 	  	 				</p>
 	  	 			</h4>
 
-		  	 		<img src="{{ asset('images/taller/foto-taller-3.jpg') }}" alt="">
+		  	 		<img src="{{ asset('images/taller/crear/4_1.jpg') }}" alt="">
 	  	 		</div>
 	  	 			  	 		
 	  	 	</div>
