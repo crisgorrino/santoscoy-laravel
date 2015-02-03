@@ -21,7 +21,7 @@
 	
 }
 
-.cruz{position:absolute; color:$third-gray; margin:0; font-weight:normal; font-size:4em; display:inline-block; vertical-align:top; z-index:100; &:hover{color:$main-blue; cursor:pointer;}
+.cruz{position:absolute; color:$third-gray; margin:0; font-weight:normal; font-size:4em; display:inline-block; vertical-align:top; z-index:100; &:hover{color:$main-blue; cursor:pointer; z-index:1000;}
 	
 		p{
 			display:inline-block; vertical-align: top; background-color:#322f31; padding:20px; margin:0; color:$main-gray;font-weight: normal; letter-spacing: 2px; width:260px;

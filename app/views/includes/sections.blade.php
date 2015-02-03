@@ -106,8 +106,12 @@
 	  	 					<span>Un proyecto sustentable no sólo es amigable con el ambiente; sino que busca aprovechar y optimizar cada recurso de manera que una vez construido, 												sus consumos sean mínimos. </span>	
 	  	 				</p>
 	  	 			</h4>
-
-		  	 		<img src="{{ asset('images/taller/profundizar/1_1.jpg') }}" alt="">
+	  	 			<div class="preparacion-slides">
+			  	 		<img src="{{ asset('images/taller/profundizar/1_1.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/profundizar/1_2.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/profundizar/1_3.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/profundizar/1_4.jpg') }}" alt="">
+	  	 			</div>	
 	  	 		</div>
 	  	 		
 	  	 		<div id="incubacion">
@@ -142,8 +146,12 @@
 	  	 					<span>La arquitectura subraya así, esta conexión entre la idea y las líneas, entre la quimera y lo real. Y debe ser consciente de que lo que inició como bosquejo, vivirá 								y afectará la mancha urbana de una ciudad.</span>	
 	  	 				</p>
 	  	 			</h4>
-
-		  	 		<img src="{{ asset('images/taller/taller/2_1.jpg') }}" alt="">
+	  	 			<div class="incubacion-slides">
+			  	 		<img src="{{ asset('images/taller/taller/2_1.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/taller/2_2.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/taller/2_3.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/taller/2_4.jpg') }}" alt="">
+	  	 			</div>
 	  	 		</div>
 	  	 		
 	  	 		<div id="iluminacion">
@@ -178,8 +186,12 @@
 	  	 					<span>Combinación de texturas, formas, colores que definen el destino absoluto de una creación que cumpla con expectativas e incluso las supere, para lograr un espacio incomparable.</span>	
 	  	 				</p>
 	  	 			</h4>
-
-		  	 		<img src="{{ asset('images/taller/definir/3_1.jpg') }}" alt="">
+	  	 			<div class="iluminacion-slides">
+		  	 			<img src="{{ asset('images/taller/definir/3_1.jpg') }}" alt="">
+		  	 			<img src="{{ asset('images/taller/definir/3_2.jpg') }}" alt="">
+		  	 			<img src="{{ asset('images/taller/definir/3_3.jpg') }}" alt="">
+		  	 			<img src="{{ asset('images/taller/definir/3_4.jpg') }}" alt="">
+	  	 			</div>	
 	  	 		</div>
 	  	 		
 	  	 		<div id="verificacion">
@@ -214,8 +226,12 @@
 	  	 					<span>La creación de un sitio ideal para las personas es minucioso, la arquitectura da cobijo a contextos de vida y forma estructuras que las contienen. Es el arte de habitar y crear espacios funcionales y hacerlos públicos, para todos.</span>	
 	  	 				</p>
 	  	 			</h4>
-
-		  	 		<img src="{{ asset('images/taller/crear/4_1.jpg') }}" alt="">
+	  	 			<div class="verificacion-slides">
+			  	 		<img src="{{ asset('images/taller/crear/4_1.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/crear/4_2.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/crear/4_3.jpg') }}" alt="">
+			  	 		<img src="{{ asset('images/taller/crear/4_4.jpg') }}" alt="">
+	  	 			</div>	
 	  	 		</div>
 	  	 			  	 		
 	  	 	</div>
