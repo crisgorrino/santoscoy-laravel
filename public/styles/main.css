@@ -1093,7 +1093,7 @@ footer {
   font-size: 4.2em;
   display: inline-block;
   vertical-align: top;
-  z-index: 100;
+  z-index: 1000;
   font-family: 'ta';}
   .cruz:hover {
     /*color: #00aeef;*/
