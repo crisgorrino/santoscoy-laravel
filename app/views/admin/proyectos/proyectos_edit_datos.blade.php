@@ -65,7 +65,7 @@
                     <input type="text" class="form-control validate[required, maxSize[150]]" data-prompt-position="topLeft" placeholder="..." name="cliente" value="{{{ Input::old('cliente')?Input::old('cliente'):(isset($proyecto->cliente)?$proyecto->cliente:'') }}}"/>
                 </div>
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Status (planeaci&oacute;n, en proceso, terminado)</label>
                     <input type="text" class="form-control validate[required, maxSize[100]]" data-prompt-position="topLeft" placeholder="..." name="status" value="{{{ Input::old('status')?Input::old('status'):(isset($proyecto->status)?$proyecto->status:'') }}}"/>
                 </div>
                 <div class="form-group">
