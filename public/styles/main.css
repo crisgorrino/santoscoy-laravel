@@ -431,10 +431,12 @@ html, body {
   margin-bottom: 0;
   margin-right: auto;
   margin-left: auto;
-  width:100%;
+  min-width:100%;
   left: 0;
   top: 0;
-  display: block; }
+  display: block; 
+
+  }
 
 #slider1 .overview li {
   float: left;
@@ -807,7 +809,7 @@ footer {
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 4px;
-      font-size: .8em;
+      font-size: .7em;
       color: #bdbec1; }
 .left {
   float: left; }
@@ -1063,7 +1065,7 @@ footer {
         width: 100%;
         display: block; }
   .taller-cont ul {
-    padding: .5% 0 .25% 0;
+    padding: 1% 0 1% 0;
     border-top: 1px solid #707070;
     border-bottom: 1px solid #707070;
     clear: both;
@@ -1256,11 +1258,11 @@ footer {
 
 .edicion-desc {
   width: 600px;
-  margin: 0 auto; 
+  margin: 0 auto 180px auto; 
   text-align: justify;}
   .edicion-desc p {
     letter-spacing: 2px;
-    font-size: .8em;
+    font-size: .7em;
     margin: 20px 0;
     line-height: 20px;
     text-transform: uppercase; }

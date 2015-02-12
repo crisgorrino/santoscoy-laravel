@@ -203,7 +203,7 @@
 
 			  <ul class="proy-tags">
 
-				 <li><a>ARQUITECTURA<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
+				 <li><a>PROYECTO DE:<br> <span class="data-arquitectura">{{ strtoupper($pp_arquitectura) }}</span></a></li>
 
 				 <li><a>LOCACIÓN<br> <span class="data-locacion">{{ strtoupper($pp_locacion) }}</span></a></li>
 
