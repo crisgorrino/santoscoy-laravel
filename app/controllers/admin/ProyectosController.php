@@ -20,6 +20,7 @@ class admin_ProyectosController extends BaseController {
 		
 		$proyectos = Proyectos::with('categorias', 'imagen')
 							  ->publishedNotRemoved()
+							  ->orderBy('ordering', 'asc')
 							  ->orderBy('created_at', 'desc')
 							  ->orderBy('id', 'desc');
 		//echo "<pre>";		  
@@ -150,7 +151,8 @@ class admin_ProyectosController extends BaseController {
 			'cliente'			=> 'required|max:150',
 			'status'			=> 'required|max:100',
 			'asociado'			=> 'required|max:150',
-			'dimension'			=> 'required|max:100'
+			'dimension'			=> 'required|max:100',
+			'ordering'			=> 'required|integer'
 		);
 
 		$validation = Validator::make(Input::all(), $rules);
@@ -185,6 +187,7 @@ class admin_ProyectosController extends BaseController {
 		$proyecto->status				= Winput::get('status');
 		$proyecto->asociado				= Winput::get('asociado');
 		$proyecto->dimension			= Winput::get('dimension');
+		$proyecto->ordering				= Winput::get('ordering');
 		
 		//Guardar el registro
 		if( $proyecto->save() ){
@@ -725,6 +728,71 @@ class admin_ProyectosController extends BaseController {
 			}						
 						
 		}
+		
+	}
+	
+	//
+	public function getSave_order()
+	{
+		return Redirect::to('admin/proyectos');
+	}
+	
+	//Guardar el orden de los elementos
+	public function postSave_order()
+	{
+		$order  = Input::get( 'order', array() ); //Es array
+		$msg = '';
+		
+		$msgError='';
+		$msgSuccess='';
+		
+		if( count($order) > 0 ){
+			foreach($order as $key=>$value){
+				
+				if( empty($value) ) $value=0;
+				
+				$proyecto = Proyectos::select('id', 'titulo', 'ordering')->find($key);
+				
+				if( $proyecto ){
+					
+					$ordering_old = $proyecto->ordering;
+					
+					$proyecto->ordering = $value;
+					
+					if( $proyecto->save() ){
+						if( $ordering_old!=$proyecto->ordering ){
+							$msgSuccess.='<p><b>Proyecto '.$proyecto->titulo.', cambió orden de <strong>'.$ordering_old.'</strong> a <strong>'.$proyecto->ordering.'</strong>.</b></p>';
+						}
+					}
+					else{
+						$msgError.='<p><b>Orden no guardado para el proyecto '.$proyecto->titulo.'.</b></p>';
+					}
+					
+				}
+				else{
+					$msgError.='<p><b>No existe el proyecto con ID: '.$key.'</b></p>';
+				}
+				
+			}
+		}
+		
+		if( !empty($msgSuccess) ){
+			$msg.='<div class="desvanecer alert alert-success alert-dismissable">
+					<i class="fa fa-check"></i>
+					<a type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+					'.$msgSuccess.'
+				</div>';
+		}
+		
+		if( !empty($msgError) ){
+			$msg.='<div class="desvanecer alert alert-danger alert-dismissable">
+					<i class="fa fa-ban"></i>
+					<a type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+					Error : '.$msgError.'
+				</div>';
+		}
+		
+		return Redirect::back()->with('msg', $msg);
 		
 	}
 	

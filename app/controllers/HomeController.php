@@ -25,6 +25,8 @@ class HomeController extends BaseController {
 		$proyectos = Proyectos::select('proyectos.*')
 							  ->with('imagenes', 'categorias')
 							  ->groupBy('proyectos.id')
+							  ->orderBy('proyectos.ordering', 'asc')
+							  ->orderBy('proyectos.created_at', 'desc')
 							  ->orderBy('proyectos.id', 'DESC');
 					
 		if( Sess::has('categorias') ){

@@ -76,6 +76,10 @@
                     <label>Dimensi&oacute;n</label>
                     <input type="text" class="form-control validate[required, maxSize[100]]" data-prompt-position="topLeft" placeholder="..." name="dimension" value="{{{ Input::old('dimension')?Input::old('dimension'):(isset($proyecto->dimension)?$proyecto->dimension:'') }}}"/>
                 </div>
+                <div class="form-group">
+                    <label>Ordenamiento</label>
+                    <input type="text" class="form-control validate[required, custom[integer]]" data-prompt-position="topLeft" placeholder="..." name="ordering" value="{{{ Input::old('ordering')?Input::old('ordering'):(isset($proyecto->ordering)?$proyecto->ordering:0) }}}"/>
+                </div>
                 
                 <p><a href="#" class="btn bg-olive btn-lg save"><span>GUARDAR</span></a></p>
             </form>
