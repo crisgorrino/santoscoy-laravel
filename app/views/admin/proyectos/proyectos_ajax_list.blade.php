@@ -20,6 +20,7 @@
                     <th width="10%" class="title"><strong>Cliente:</strong></th>
                     <th width="10%" class="title" nowrap="nowrap"><strong>Status:</strong></th>
                     <th width="5%" class="title"><strong>Asociado</strong></th>
+                    <th width="10%" class="title"><strong>Orden</strong><br><a href="#" class="btn-flat btn-app" onclick="$('#adminForm').attr('action', '{{ url('admin/proyectos/save-order') }}'); $('#adminForm').submit();"><i class="fa fa-save"></i> Guardar</a></th>
                     <th width="5%" class="title"><strong>ID</strong></th>
                 </tr>
             </thead>
@@ -60,6 +61,7 @@
                             <td nowrap="nowrap">{{ $value->cliente }}</td>
                             <td nowrap="nowrap">{{ $value->status }}</td>
                             <td nowrap="nowrap">{{ $value->asociado }}</td>
+                            <td align="center"><input type="text" style="width:35px; text-align:center" name="order[{{ $value->id }}]" / value="{{ $value->ordering }}" /></td>
                             <td>{{ $value->id }}</td>
                         </tr>
                         <?php $k = 1 - $k; ?>

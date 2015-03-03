@@ -40,9 +40,14 @@
 				<div class="viewport jcarousel">
 					<ul class="overview">
                     @if( $editorial )
-						<?php $pos = 1 ?>
+						<?php $pos = 1; ?>
                         @foreach( $editorial as $value )
-                            <li class="hover-editorial" data-pos="{{ $pos }}" data-editorial='{{ json_encode($value) }}'><span class="">{{ $value->no_publicacion }}</span></li>
+                        	<?php
+							//addslashes_extended($value);
+							//dd( print_r($value) );
+							?>
+                            <li class="hover-editorial" data-pos="{{ $pos }}" 
+                            <?php printf('data-editorial="%s"', htmlspecialchars(json_encode($value), ENT_QUOTES, 'UTF-8')); ?>><span class="">{{ $value->no_publicacion }}</span></li>
                             <?php $pos++; ?>
                         @endforeach
                     @endif
