@@ -498,10 +498,10 @@
     </script>
     
     <script type="text/javascript">
-	$('.preparacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: true, timeout:5000 });	
-	$('.incubacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: true, timeout:5000 });
-	$('.iluminacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: true, timeout:5000 });
-	$('.verificacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: true, timeout:5000 });
+	$('.preparacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random:false, timeout:2000 });	
+	$('.incubacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: false, timeout:2000 });
+	$('.iluminacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: false, timeout:2000 });
+	$('.verificacion-slides').cycle({ fx: 'fade', width: 'auto', height:'100%', containerResize: 0, slideResize:0, fit:1, nowrap:0, random: false, timeout:2000 });
     </script>
     
     
