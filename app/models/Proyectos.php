@@ -75,7 +75,8 @@ class Proyectos extends Eloquent {
 		return $this->hasMany('ProyectoImagenes', 'proyecto_id', 'id')
 					->select('*', DB::raw("CONCAT(".$path.") AS path") )
 					->orderBy('ordering', 'ASC')
-					->orderBy('created_at', 'DESC');
+					->orderBy('created_at', 'DESC')
+					->orderBy('id', 'DESC');
 	}
 	
 	//Obtener la primer imagen del proyecto
@@ -89,7 +90,8 @@ class Proyectos extends Eloquent {
 		return $this->hasOne("ProyectoImagenes", 'proyecto_id', 'id')
 					->select('*', DB::raw("CONCAT(".$path.") AS path") )
 					->orderBy('ordering', 'ASC')
-					->orderBy('created_at', 'DESC');
+					->orderBy('created_at', 'DESC')
+					->orderBy('id', 'DESC');
 		
 	}
 	
