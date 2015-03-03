@@ -105,11 +105,12 @@ class HomeController extends BaseController {
 		$totalEditorial = $editorial->count();
 		
 		$path ="'".$this->pathUpload."proyectos/id_',proyecto_id,'/img_id_', id,'/'";
-		$imagenes =ProyectoImagenes::select('id', 'archivo', DB::raw("CONCAT(".$path.") AS path") )
+		
+		/*$imagenes =ProyectoImagenes::select('id', 'archivo', DB::raw("CONCAT(".$path.") AS path") )
 								   //->where('id', '=', 30)
 								   ->get()
 								   //->random($this->count())
-								   ;
+								   ;*/
 									 
 		//$imagenes->random($imagenes->count());
 		
@@ -124,7 +125,7 @@ class HomeController extends BaseController {
 				'total_proyectos'	=> $total_proyectos,
 				'editorial'			=> $editorial,
 				'totalEditorial'	=> $totalEditorial,
-				'imagenes'			=> $imagenes,
+				//'imagenes'			=> $imagenes,
 			)
 		);
 	}

@@ -169,7 +169,7 @@
 
 	  <div class="main-img cycle-slideshow" data-cycle-auto-height="true">
 
-      	@if( $imagenes )
+      	<?php /*?>@if( $imagenes )
 
         	@foreach($imagenes as $value)
 
@@ -185,7 +185,13 @@
 
 			<img src="{{ asset('images/proyectos/bg-image-1.jpg') }}" alt="">
 
-        @endif
+        @endif<?php */?>
+        	<!-- here gorrino -->
+            <img src="{{ asset('uploads/proyectos/id_2/img_id_13/04.jpg') }}" alt="">
+            <img src="{{ asset('uploads/proyectos/id_3/img_id_20/edificios-3d-7570.jpg') }}" alt="">
+            <img src="{{ asset('uploads/proyectos/id_3/img_id_21/edificio-plataforma_3dexperience_.jpg') }}" alt="">
+            <img src="{{ asset('images/proyectos/bg-image-1.jpg') }}" alt="">
+            <img src="{{ asset('uploads/proyectos/id_4/img_id_23/edificio-espiral1-a.jpg') }}" alt="">
 
 	  </div>		
 
